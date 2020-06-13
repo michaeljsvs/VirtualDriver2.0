@@ -62,6 +62,11 @@ namespace VirtualDriver
 
         }
 
-
+        private void button5_Click(object sender, EventArgs e)
+        {
+            GameDistancia ventana = new GameDistancia();
+            ventana.Show();
+            this.Hide();
+        }
     }
 }
