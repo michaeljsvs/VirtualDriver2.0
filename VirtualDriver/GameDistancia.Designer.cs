@@ -47,6 +47,8 @@
             this.person1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.person2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -219,12 +221,30 @@
             this.person2.TabIndex = 1;
             this.person2.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.Location = new System.Drawing.Point(12, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Velocidad = 0";
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // GameDistancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.over);
             this.Controls.Add(this.enemy3);
@@ -243,7 +263,10 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GameDistancia";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameDistancia_FormClosing);
+            this.Load += new System.EventHandler(this.GameDistancia_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameDistancia_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameDistancia_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -282,5 +305,7 @@
         private System.Windows.Forms.PictureBox person1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox person2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer2;
     }
 }

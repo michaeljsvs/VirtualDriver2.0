@@ -26,6 +26,8 @@ namespace VirtualDriver
         Random r = new Random();
         int x, y;
         int collectedcoins = 0;
+        bool desacelerar = false;
+        bool up = false;
 
         //TIMER
         //genera eventos definidos por el usuario,
@@ -39,6 +41,7 @@ namespace VirtualDriver
             carperson();
             coins(gamespeed);
             coinscollection();
+            velocidad();
         }
 
         void enemy(int speed)
@@ -68,14 +71,18 @@ namespace VirtualDriver
 
         void person(int speed)
         {
-            if (person1.Top >= 500)
+            if (person1.Left >= 380)
             {
-                x = r.Next(0, 200);
-                person1.Location = new Point(x, 0);
+                y = r.Next(0, 200);
+                person1.Location = new Point(0, y);
                 person1.Image = Image.FromFile
                 ("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\niños.png");
             }
-            else { person1.Top += speed; }
+            else 
+            { 
+                person1.Left += speed;
+                person1.Top += speed;
+            }
         }
 
         void coins(int speed)
@@ -162,6 +169,11 @@ namespace VirtualDriver
             }
         }
 
+        void velocidad()
+        {
+            label2.Text = "Velocidad = " + gamespeed.ToString();
+        }
+
         private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int u = r.Next(20, 200);
@@ -176,30 +188,80 @@ namespace VirtualDriver
             gamespeed = 0;
         }
 
+        private void GameDistancia_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                desacelerar = true;
+                up = false;
+            }
+        }
+
+
+        void desacelerarcar()
+        {
+            if (desacelerar == true && gamespeed > 0)
+            {
+                gamespeed--;
+            }
+                
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            desacelerarcar();
+        }
+
+        private void GameDistancia_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GameDistancia_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void GameDistancia_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
             {
-                if (car.Left > 0)
-                    car.Left += -8;
+                if (car.Left < 380)
+                {
+                    car.Left -= 20;
+                    if (up)
+                    {
+                        desacelerar = false;
+                    }
+                    
+                }
             }
             
             if (e.KeyCode == Keys.Right)
             {
                 if (car.Right < 380)
-                    car.Left += 8;
+                {
+                    car.Left += 20;
+                    if (up)
+                    {
+                        desacelerar = false;
+                    }
+                } 
             }
             
             if (e.KeyCode == Keys.Up)
             {
-                if (gamespeed < 21)
+                if (gamespeed < 5)
+                {
                     gamespeed++;
+                    up = true;
+                }
             }
-            
-            if (e.KeyCode == Keys.Left)
+
+            if (e.KeyCode == Keys.Down)
             {
                 if (gamespeed > 0)
-                    gamespeed--;
+                    gamespeed --;
             }
         }
     }
