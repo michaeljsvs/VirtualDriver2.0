@@ -33,3 +33,15 @@ C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\D
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.exe
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.pdb
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.GameDistancia.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.exe.config
+E:\TED\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.exe
+E:\TED\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.pdb
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.csprojAssemblyReference.cache
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.GameDistancia.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Inicio.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Properties.Resources.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.TestManejo.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.csproj.GenerateResource.cache
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.csproj.CoreCompileInputs.cache
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.exe
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.pdb

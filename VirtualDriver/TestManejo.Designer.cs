@@ -37,15 +37,15 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelCorrecto = new System.Windows.Forms.Panel();
+            this.btnCorrecto = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelError = new System.Windows.Forms.Panel();
+            this.btnIncorrecto = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnCorrecto = new System.Windows.Forms.Button();
-            this.btnIncorrecto = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -180,6 +180,33 @@
             this.panelCorrecto.TabIndex = 6;
             this.panelCorrecto.Visible = false;
             // 
+            // btnCorrecto
+            // 
+            this.btnCorrecto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnCorrecto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCorrecto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCorrecto.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCorrecto.Location = new System.Drawing.Point(492, 262);
+            this.btnCorrecto.Name = "btnCorrecto";
+            this.btnCorrecto.Size = new System.Drawing.Size(75, 23);
+            this.btnCorrecto.TabIndex = 7;
+            this.btnCorrecto.Text = "Siguiente";
+            this.btnCorrecto.UseVisualStyleBackColor = false;
+            this.btnCorrecto.Click += new System.EventHandler(this.btnCorrecto_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Green;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(158, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 26);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Muy Buena Respuesta";
+            // 
             // panelError
             // 
             this.panelError.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelError.BackgroundImage")));
@@ -192,6 +219,21 @@
             this.panelError.Size = new System.Drawing.Size(600, 315);
             this.panelError.TabIndex = 5;
             this.panelError.Visible = false;
+            // 
+            // btnIncorrecto
+            // 
+            this.btnIncorrecto.BackColor = System.Drawing.Color.Red;
+            this.btnIncorrecto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnIncorrecto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIncorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncorrecto.ForeColor = System.Drawing.Color.Transparent;
+            this.btnIncorrecto.Location = new System.Drawing.Point(492, 265);
+            this.btnIncorrecto.Name = "btnIncorrecto";
+            this.btnIncorrecto.Size = new System.Drawing.Size(75, 23);
+            this.btnIncorrecto.TabIndex = 8;
+            this.btnIncorrecto.Text = "Siguiente";
+            this.btnIncorrecto.UseVisualStyleBackColor = false;
+            this.btnIncorrecto.Click += new System.EventHandler(this.btnIncorrecto_Click);
             // 
             // lblError
             // 
@@ -262,48 +304,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "¿Que es lo primero que debe hacer \r\nal subirse al vehiculo?";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Green;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(158, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 26);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Muy Buena Respuesta";
-            // 
-            // btnCorrecto
-            // 
-            this.btnCorrecto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnCorrecto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCorrecto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCorrecto.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCorrecto.Location = new System.Drawing.Point(492, 262);
-            this.btnCorrecto.Name = "btnCorrecto";
-            this.btnCorrecto.Size = new System.Drawing.Size(75, 23);
-            this.btnCorrecto.TabIndex = 7;
-            this.btnCorrecto.Text = "Siguiente";
-            this.btnCorrecto.UseVisualStyleBackColor = false;
-            this.btnCorrecto.Click += new System.EventHandler(this.btnCorrecto_Click);
-            // 
-            // btnIncorrecto
-            // 
-            this.btnIncorrecto.BackColor = System.Drawing.Color.Red;
-            this.btnIncorrecto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnIncorrecto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIncorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIncorrecto.ForeColor = System.Drawing.Color.Transparent;
-            this.btnIncorrecto.Location = new System.Drawing.Point(492, 265);
-            this.btnIncorrecto.Name = "btnIncorrecto";
-            this.btnIncorrecto.Size = new System.Drawing.Size(75, 23);
-            this.btnIncorrecto.TabIndex = 8;
-            this.btnIncorrecto.Text = "Siguiente";
-            this.btnIncorrecto.UseVisualStyleBackColor = false;
-            this.btnIncorrecto.Click += new System.EventHandler(this.btnIncorrecto_Click);
             // 
             // TestManejo
             // 
