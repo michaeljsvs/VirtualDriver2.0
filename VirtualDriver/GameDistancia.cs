@@ -20,15 +20,14 @@ namespace VirtualDriver
         bool desacelerar = false;
         bool up = false;
 
-
         public GameDistancia()
         {
             InitializeComponent();
             over.Visible = false;
-            person1.Image = Image.FromFile
-                ("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\niños.png");
-            person2.Image = Image.FromFile
-                ("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\abuela.png");
+            //person1.Image = Image.FromFile
+            //    ("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\niños.png");
+            //person2.Image = Image.FromFile
+            //    ("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\abuela.png");
         }
 
         
@@ -40,16 +39,17 @@ namespace VirtualDriver
             moveline(gamespeed);
             enemy(gamespeed);
             gameover();
-            person(gamespeed);
-            carperson();
-            coins(gamespeed);
-            coinscollection();
+            //person(gamespeed);
+            //carperson();
+            //coins(gamespeed);
+            //coinscollection();
             velocidad();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             desacelerarcar();
+            
         }
 
 
@@ -74,6 +74,7 @@ namespace VirtualDriver
             if (pictureBox4.Top >= 500)
             { pictureBox4.Top = 0; }
             else { pictureBox4.Top += speed; }
+            
         }
 
         //ENEMY
@@ -126,60 +127,60 @@ namespace VirtualDriver
 
         //AGREGADOS
         //-------------------------------------------------------------------------------------------*
-        void person(int speed)
-        {
-            if (person1.Left >= 380)
-            {
-                y = r.Next(0, 200);
-                person1.Location = new Point(0, y);
-                person1.Image = Image.FromFile
-                ("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\niños.png");
-            }
-            else 
-            { 
-                person1.Left += speed;
-                person1.Top += speed;
-            }
-        }
+        //void person(int speed)
+        //{
+        //    if (person1.Left >= 380)
+        //    {
+        //        y = r.Next(0, 200);
+        //        person1.Location = new Point(0, y);
+        //        person1.Image = Image.FromFile
+        //        ("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\niños.png");
+        //    }
+        //    else 
+        //    { 
+        //        person1.Left += speed;
+        //        person1.Top += speed;
+        //    }
+        //}
 
-        void coins(int speed)
-        {
-            if (person2.Top >= 500)
-            {
-                x = r.Next(0, 200);
-                person2.Location = new Point(x, 0);
-                person2.Image = Image.FromFile
-                ("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\abuela.png");
-            }
-            else { person2.Top += speed; }
-            //Hacer para cada coin
-        }
+        //void coins(int speed)
+        //{
+        //    if (person2.Top >= 500)
+        //    {
+        //        x = r.Next(0, 200);
+        //        person2.Location = new Point(x, 0);
+        //        person2.Image = Image.FromFile
+        //        ("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\abuela.png");
+        //    }
+        //    else { person2.Top += speed; }
+        //    //Hacer para cada coin
+        //}
 
-        void carperson()
-        {
-            if (car.Bounds.IntersectsWith(person1.Bounds))
-            {
-                collectedcoins++;
-                label1.Text = "Kill = " + collectedcoins.ToString();
-                //person1.Image = Image.FromFile
-                //("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\sangre.png");
-                x = r.Next(50, 300);
-                person1.Location = new Point(x, 0);
-            }
-        }
+        //void carperson()
+        //{
+        //    if (car.Bounds.IntersectsWith(person1.Bounds))
+        //    {
+        //        collectedcoins++;
+        //        label1.Text = "Kill = " + collectedcoins.ToString();
+        //        //person1.Image = Image.FromFile
+        //        //("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\sangre.png");
+        //        x = r.Next(50, 300);
+        //        person1.Location = new Point(x, 0);
+        //    }
+        //}
 
-        void coinscollection()
-        {
-            if (car.Bounds.IntersectsWith(person2.Bounds))
-            {
-                collectedcoins++;
-                label1.Text = "Kill = " + collectedcoins.ToString();
-                //person2.Image = Image.FromFile
-                //("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\sangre.png");
-                x = r.Next(50, 300);
-                person2.Location = new Point(x, 0);
-            }
-        }
+        //void coinscollection()
+        //{
+        //    if (car.Bounds.IntersectsWith(person2.Bounds))
+        //    {
+        //        collectedcoins++;
+        //        label1.Text = "Kill = " + collectedcoins.ToString();
+        //        //person2.Image = Image.FromFile
+        //        //("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\sangre.png");
+        //        x = r.Next(50, 300);
+        //        person2.Location = new Point(x, 0);
+        //    }
+        //}
         //-------------------------------------------------------------------------------------------*
 
         //VELOCIDAD

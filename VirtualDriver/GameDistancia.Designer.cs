@@ -44,11 +44,10 @@
             this.over = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.person1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.person2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,8 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.person1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.person2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -193,14 +190,6 @@
             this.optionsToolStripMenuItem.Text = "Reset";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
-            // person1
-            // 
-            this.person1.Location = new System.Drawing.Point(134, 289);
-            this.person1.Name = "person1";
-            this.person1.Size = new System.Drawing.Size(38, 48);
-            this.person1.TabIndex = 1;
-            this.person1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -212,14 +201,6 @@
             this.label1.Size = new System.Drawing.Size(62, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Kill = 0";
-            // 
-            // person2
-            // 
-            this.person2.Location = new System.Drawing.Point(287, 41);
-            this.person2.Name = "person2";
-            this.person2.Size = new System.Drawing.Size(38, 48);
-            this.person2.TabIndex = 1;
-            this.person2.TabStop = false;
             // 
             // label2
             // 
@@ -249,8 +230,6 @@
             this.Controls.Add(this.over);
             this.Controls.Add(this.enemy3);
             this.Controls.Add(this.enemy2);
-            this.Controls.Add(this.person2);
-            this.Controls.Add(this.person1);
             this.Controls.Add(this.enemy1);
             this.Controls.Add(this.car);
             this.Controls.Add(this.pictureBox4);
@@ -279,8 +258,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.person1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.person2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,10 +279,9 @@
         private System.Windows.Forms.Label over;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.PictureBox person1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox person2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
     }
 }
