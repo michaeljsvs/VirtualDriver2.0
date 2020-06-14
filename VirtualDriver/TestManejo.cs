@@ -22,8 +22,8 @@ namespace VirtualDriver
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-        int preguntaActual = 0;
+        Panel panelActual = new Panel();
+        int preguntaActual = 1;
         private void btnInicio_Click(object sender, EventArgs e)
         {
             Inicio inicio = new Inicio();
@@ -82,13 +82,13 @@ namespace VirtualDriver
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            panelActual.Visible = false;
             panelCorrecto.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            panelActual.Visible = false;
             panelError.Visible = true;
         }
 
@@ -106,9 +106,15 @@ namespace VirtualDriver
 
         private void SiguientePregunta()
         {
-            panelPreg1.Visible = true;
-            panelError.Visible = false;
+            
+            panelActual.Name = "panelPreg" + panelActual.ToString();
             panelCorrecto.Visible = false;
+            panelError.Visible = false;
+            panelActual.Visible = true;
+            /*
+             * randdomm panel siguiente
+             * 
+             */
             preguntaActual++;
         }
 

@@ -51,6 +51,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelPreg2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btn2A = new System.Windows.Forms.Button();
+            this.btn2B = new System.Windows.Forms.Button();
+            this.btn2Correcto = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -60,6 +65,7 @@
             this.panelPreg1.SuspendLayout();
             this.panelCorrecto.SuspendLayout();
             this.panelError.SuspendLayout();
+            this.panelPreg2.SuspendLayout();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -161,6 +167,7 @@
             // 
             this.panelPreg0.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPreg0.BackgroundImage")));
             this.panelPreg0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelPreg0.Controls.Add(this.panelPreg2);
             this.panelPreg0.Controls.Add(this.panelPreg1);
             this.panelPreg0.Controls.Add(this.panelCorrecto);
             this.panelPreg0.Controls.Add(this.panelError);
@@ -370,6 +377,63 @@
             this.label2.Text = "¿Que es lo primero que debe hacer \r\nal subirse al vehiculo?";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelPreg2
+            // 
+            this.panelPreg2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPreg2.BackgroundImage")));
+            this.panelPreg2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelPreg2.Controls.Add(this.btn2Correcto);
+            this.panelPreg2.Controls.Add(this.btn2B);
+            this.panelPreg2.Controls.Add(this.btn2A);
+            this.panelPreg2.Controls.Add(this.label4);
+            this.panelPreg2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPreg2.Location = new System.Drawing.Point(0, 0);
+            this.panelPreg2.Name = "panelPreg2";
+            this.panelPreg2.Size = new System.Drawing.Size(600, 315);
+            this.panelPreg2.TabIndex = 8;
+            this.panelPreg2.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(540, 50);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "¿Como procede si una ambulancia/pratulla/autobomba \r\nviene detras suyo con las si" +
+    "renas encendidas?";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn2A
+            // 
+            this.btn2A.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2A.Location = new System.Drawing.Point(60, 253);
+            this.btn2A.Name = "btn2A";
+            this.btn2A.Size = new System.Drawing.Size(96, 41);
+            this.btn2A.TabIndex = 1;
+            this.btn2A.Text = "Bajarse del Vehiculo";
+            this.btn2A.UseVisualStyleBackColor = true;
+            // 
+            // btn2B
+            // 
+            this.btn2B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2B.Location = new System.Drawing.Point(252, 253);
+            this.btn2B.Name = "btn2B";
+            this.btn2B.Size = new System.Drawing.Size(85, 41);
+            this.btn2B.TabIndex = 2;
+            this.btn2B.Text = "Frenarse donde esté";
+            this.btn2B.UseVisualStyleBackColor = true;
+            // 
+            // btn2Correcto
+            // 
+            this.btn2Correcto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2Correcto.Location = new System.Drawing.Point(417, 253);
+            this.btn2Correcto.Name = "btn2Correcto";
+            this.btn2Correcto.Size = new System.Drawing.Size(93, 41);
+            this.btn2Correcto.TabIndex = 3;
+            this.btn2Correcto.Text = "Debe Ceder el paso";
+            this.btn2Correcto.UseVisualStyleBackColor = true;
+            // 
             // TestManejo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,6 +458,8 @@
             this.panelCorrecto.PerformLayout();
             this.panelError.ResumeLayout(false);
             this.panelError.PerformLayout();
+            this.panelPreg2.ResumeLayout(false);
+            this.panelPreg2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -422,5 +488,10 @@
         private System.Windows.Forms.Button btn1Correcto;
         private System.Windows.Forms.Button btn1B;
         private System.Windows.Forms.Button btn1A;
+        private System.Windows.Forms.Panel panelPreg2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn2Correcto;
+        private System.Windows.Forms.Button btn2B;
+        private System.Windows.Forms.Button btn2A;
     }
 }
