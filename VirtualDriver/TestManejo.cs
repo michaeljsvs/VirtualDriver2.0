@@ -23,6 +23,7 @@ namespace VirtualDriver
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        int preguntaActual = 0;
         private void btnInicio_Click(object sender, EventArgs e)
         {
             Inicio inicio = new Inicio();
@@ -81,25 +82,36 @@ namespace VirtualDriver
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             panelCorrecto.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             panelError.Visible = true;
         }
 
         private void btnCorrecto_Click(object sender, EventArgs e)
         {
             panelCorrecto.Visible = false;
+            SiguientePregunta();
         }
 
         private void btnIncorrecto_Click(object sender, EventArgs e)
         {
             panelError.Visible = false;
+            SiguientePregunta();
         }
 
+        private void SiguientePregunta()
+        {
+            panelPreg1.Visible = true;
+            panelError.Visible = false;
+            panelCorrecto.Visible = false;
+            preguntaActual++;
+        }
 
-
+ 
     }
 }

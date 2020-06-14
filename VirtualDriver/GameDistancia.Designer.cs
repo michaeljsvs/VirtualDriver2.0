@@ -243,7 +243,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GameDistancia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Practica";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameDistancia_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameDistancia_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameDistancia_KeyUp);

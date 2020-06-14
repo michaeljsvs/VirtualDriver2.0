@@ -97,5 +97,38 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Properties\Images\1263344.png" />
+    <Content Include="Properties\Images\1665665.png" />
+    <Content Include="Properties\Images\1665670.png" />
+    <Content Include="Properties\Images\32763.png" />
+    <Content Include="Properties\Images\65242942-concepto-de-diseño-plano-de-la-escuela-de-conducción-con-el-coche-mujer-instructor-.jpg" />
+    <Content Include="Properties\Images\alcohol.jpg" />
+    <Content Include="Properties\Images\d6540d13cfed389a7a476370d5a9a6e9.gif" />
+    <Content Include="Properties\Images\descarga %281%29.jpg" />
+    <Content Include="Properties\Images\descarga %282%29.jpg" />
+    <Content Include="Properties\Images\descarga.jpg" />
+    <Content Include="Properties\Images\descarga.png" />
+    <Content Include="Properties\Images\gettyimages-1006989024-612x612.jpg" />
+    <Content Include="Properties\Images\hqdefault.jpg" />
+    <Content Include="Properties\Images\maine-computer-icons-clip-art-close-icon-thumb.jpg" />
+    <Content Include="Properties\Images\png-transparent-maine-computer-icons-close-icon %281%29.png" />
+    <Content Include="Properties\Images\png-transparent-maine-computer-icons-close-icon.png" />
+    <Content Include="Properties\Images\pngocean.com %281%29.png" />
+    <Content Include="Properties\Images\pngocean.com %2810%29.png" />
+    <Content Include="Properties\Images\pngocean.com %282%29.png" />
+    <Content Include="Properties\Images\pngocean.com %283%29.png" />
+    <Content Include="Properties\Images\pngocean.com %284%29.png" />
+    <Content Include="Properties\Images\pngocean.com %285%29.png" />
+    <Content Include="Properties\Images\pngocean.com %286%29.png" />
+    <Content Include="Properties\Images\pngocean.com %287%29.png" />
+    <Content Include="Properties\Images\pngocean.com %288%29.png" />
+    <Content Include="Properties\Images\pngocean.com %289%29.png" />
+    <Content Include="Properties\Images\pngocean.com.png" />
+    <Content Include="Properties\Images\pngwing.com.png" />
+    <Content Include="Properties\Images\preview-2385810-1200x630-99-1560174424.jpg" />
+    <Content Include="Properties\Images\Sin título.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

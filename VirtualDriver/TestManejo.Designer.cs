@@ -35,7 +35,12 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelPreg0 = new System.Windows.Forms.Panel();
+            this.panelPreg1 = new System.Windows.Forms.Panel();
+            this.btn1B = new System.Windows.Forms.Button();
+            this.btn1A = new System.Windows.Forms.Button();
+            this.btn1Correcto = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelCorrecto = new System.Windows.Forms.Panel();
             this.btnCorrecto = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,7 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelPreg0.SuspendLayout();
+            this.panelPreg1.SuspendLayout();
             this.panelCorrecto.SuspendLayout();
             this.panelError.SuspendLayout();
             this.SuspendLayout();
@@ -151,21 +157,80 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // panel1
+            // panelPreg0
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Controls.Add(this.panelCorrecto);
-            this.panel1.Controls.Add(this.panelError);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 35);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 315);
-            this.panel1.TabIndex = 2;
+            this.panelPreg0.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPreg0.BackgroundImage")));
+            this.panelPreg0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelPreg0.Controls.Add(this.panelPreg1);
+            this.panelPreg0.Controls.Add(this.panelCorrecto);
+            this.panelPreg0.Controls.Add(this.panelError);
+            this.panelPreg0.Controls.Add(this.button3);
+            this.panelPreg0.Controls.Add(this.button2);
+            this.panelPreg0.Controls.Add(this.button1);
+            this.panelPreg0.Controls.Add(this.label2);
+            this.panelPreg0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPreg0.Location = new System.Drawing.Point(0, 35);
+            this.panelPreg0.Name = "panelPreg0";
+            this.panelPreg0.Size = new System.Drawing.Size(600, 315);
+            this.panelPreg0.TabIndex = 2;
+            // 
+            // panelPreg1
+            // 
+            this.panelPreg1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPreg1.BackgroundImage")));
+            this.panelPreg1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelPreg1.Controls.Add(this.btn1B);
+            this.panelPreg1.Controls.Add(this.btn1A);
+            this.panelPreg1.Controls.Add(this.btn1Correcto);
+            this.panelPreg1.Controls.Add(this.label3);
+            this.panelPreg1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPreg1.Location = new System.Drawing.Point(0, 0);
+            this.panelPreg1.Name = "panelPreg1";
+            this.panelPreg1.Size = new System.Drawing.Size(600, 315);
+            this.panelPreg1.TabIndex = 7;
+            this.panelPreg1.Visible = false;
+            // 
+            // btn1B
+            // 
+            this.btn1B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1B.Location = new System.Drawing.Point(417, 233);
+            this.btn1B.Name = "btn1B";
+            this.btn1B.Size = new System.Drawing.Size(128, 55);
+            this.btn1B.TabIndex = 3;
+            this.btn1B.Text = "Nada, No hay ningun problema";
+            this.btn1B.UseVisualStyleBackColor = true;
+            this.btn1B.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btn1A
+            // 
+            this.btn1A.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1A.Location = new System.Drawing.Point(60, 233);
+            this.btn1A.Name = "btn1A";
+            this.btn1A.Size = new System.Drawing.Size(113, 52);
+            this.btn1A.TabIndex = 2;
+            this.btn1A.Text = "Manejar Con Precaucion";
+            this.btn1A.UseVisualStyleBackColor = true;
+            this.btn1A.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btn1Correcto
+            // 
+            this.btn1Correcto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1Correcto.Location = new System.Drawing.Point(237, 233);
+            this.btn1Correcto.Name = "btn1Correcto";
+            this.btn1Correcto.Size = new System.Drawing.Size(109, 55);
+            this.btn1Correcto.TabIndex = 1;
+            this.btn1Correcto.Text = "Predir un Taxi";
+            this.btn1Correcto.UseVisualStyleBackColor = true;
+            this.btn1Correcto.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(55, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(490, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "¿Que debe hacer al consmir bebidas alcoholicas?";
             // 
             // panelCorrecto
             // 
@@ -310,7 +375,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 350);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelPreg0);
             this.Controls.Add(this.barraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TestManejo";
@@ -321,8 +386,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelPreg0.ResumeLayout(false);
+            this.panelPreg0.PerformLayout();
+            this.panelPreg1.ResumeLayout(false);
+            this.panelPreg1.PerformLayout();
             this.panelCorrecto.ResumeLayout(false);
             this.panelCorrecto.PerformLayout();
             this.panelError.ResumeLayout(false);
@@ -338,7 +405,7 @@
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelPreg0;
         private System.Windows.Forms.Button btnIncio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
@@ -350,5 +417,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCorrecto;
         private System.Windows.Forms.Button btnIncorrecto;
+        private System.Windows.Forms.Panel panelPreg1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn1Correcto;
+        private System.Windows.Forms.Button btn1B;
+        private System.Windows.Forms.Button btn1A;
     }
 }
