@@ -64,7 +64,7 @@ namespace VirtualDriver
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Practica ventana = new Practica();
+            GameDistancia ventana = new GameDistancia();
             ventana.Show();
             this.Hide();
         }

@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Practica.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Practica.Designer.cs">
-      <DependentUpon>Practica.cs</DependentUpon>
-    </Compile>
     <Compile Include="GameDistancia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,9 +66,6 @@
     <Compile Include="TestManejo.Designer.cs">
       <DependentUpon>TestManejo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Practica.resx">
-      <DependentUpon>Practica.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GameDistancia.resx">
       <DependentUpon>GameDistancia.cs</DependentUpon>
     </EmbeddedResource>
