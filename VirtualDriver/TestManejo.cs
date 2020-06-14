@@ -8,15 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Collections;
 
 namespace VirtualDriver
 {
     public partial class TestManejo : Form
     {
+        
+        
+        
+
         public TestManejo()
         {
             InitializeComponent();
+            
+            //pnl.Add(panelPreg3);
+            //pnl.Add(panelPreg4);
         }
+
+        List<Panel> pnl = new List<Panel>();
+        
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -106,8 +117,11 @@ namespace VirtualDriver
 
         private void SiguientePregunta()
         {
-            
-            panelActual.Name = "panelPreg" + panelActual.ToString();
+            List<Panel> pnl = new List<Panel>();
+            pnl.Add(panelPreg1);
+            pnl.Add(panelPreg2);
+
+            panelActual = pnl[preguntaActual-1];
             panelCorrecto.Visible = false;
             panelError.Visible = false;
             panelActual.Visible = true;
