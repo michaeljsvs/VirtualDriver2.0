@@ -22,12 +22,8 @@ namespace VirtualDriver
         {
             InitializeComponent();
             
-            //pnl.Add(panelPreg3);
-            //pnl.Add(panelPreg4);
-        }
 
-        List<Panel> pnl = new List<Panel>();
-        
+        }       
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -35,6 +31,7 @@ namespace VirtualDriver
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         Panel panelActual = new Panel();
         int preguntaActual = 1;
+        int respuestasCorrectas = 0;
         private void btnInicio_Click(object sender, EventArgs e)
         {
             Inicio inicio = new Inicio();
@@ -95,6 +92,7 @@ namespace VirtualDriver
         {
             panelActual.Visible = false;
             panelCorrecto.Visible = true;
+            respuestasCorrectas ++;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -118,18 +116,43 @@ namespace VirtualDriver
         private void SiguientePregunta()
         {
             List<Panel> pnl = new List<Panel>();
+            pnl.Add(panelPreg0);
             pnl.Add(panelPreg1);
             pnl.Add(panelPreg2);
+            pnl.Add(panelPreg3);
+            pnl.Add(panelPreg4);
 
-            panelActual = pnl[preguntaActual-1];
-            panelCorrecto.Visible = false;
-            panelError.Visible = false;
-            panelActual.Visible = true;
-            /*
-             * randdomm panel siguiente
-             * 
-             */
-            preguntaActual++;
+            if (pnl.Count > preguntaActual)
+            {
+                panelActual = pnl[preguntaActual];
+                panelCorrecto.Visible = false;
+                panelError.Visible = false;
+                panelActual.Visible = true;
+                /*
+                 * randdomm panel siguiente
+                 * 
+                 */
+                preguntaActual++;
+            }
+            else {
+                panelFinal.Visible = true;
+                lblResultados.Text = respuestasCorrectas.ToString() + " respuestas correctas de " + pnl.Count.ToString() + " posibles.";
+                if ((respuestasCorrectas/pnl.Count) >= 0.7){
+                    lblTest.ForeColor = Color.Green;
+                    lblTest.Text = "Aprobado";
+                    imgAprobado.Visible = true;
+                    lblCondicion.Text = "Felicitaciones";
+                }
+                else{
+                    lblTest.ForeColor = Color.Red;
+                    lblTest.Text = "Reprobado";
+                    imgDesaprobado.Visible = true;
+                    lblCondicion.Text = "Vuelve a intentar";
+                }
+                
+                /* panelFinal.visible = true*/
+            }
+           
         }
 
  

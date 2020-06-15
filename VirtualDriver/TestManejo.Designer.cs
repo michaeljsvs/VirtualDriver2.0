@@ -36,6 +36,11 @@
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panelPreg0 = new System.Windows.Forms.Panel();
+            this.panelPreg2 = new System.Windows.Forms.Panel();
+            this.btn2Correcto = new System.Windows.Forms.Button();
+            this.btn2B = new System.Windows.Forms.Button();
+            this.btn2A = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelPreg1 = new System.Windows.Forms.Panel();
             this.btn1B = new System.Windows.Forms.Button();
             this.btn1A = new System.Windows.Forms.Button();
@@ -51,21 +56,40 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelPreg2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btn2A = new System.Windows.Forms.Button();
-            this.btn2B = new System.Windows.Forms.Button();
-            this.btn2Correcto = new System.Windows.Forms.Button();
+            this.panelPreg3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn3A = new System.Windows.Forms.Button();
+            this.btn3Correcto = new System.Windows.Forms.Button();
+            this.btn3B = new System.Windows.Forms.Button();
+            this.panelPreg4 = new System.Windows.Forms.Panel();
+            this.btn4B = new System.Windows.Forms.Button();
+            this.btn4Correcto = new System.Windows.Forms.Button();
+            this.btn4A = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panelFinal = new System.Windows.Forms.Panel();
+            this.lblCondicion = new System.Windows.Forms.Label();
+            this.lblTest = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblResultados = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.imgDesaprobado = new System.Windows.Forms.PictureBox();
+            this.imgAprobado = new System.Windows.Forms.PictureBox();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panelPreg0.SuspendLayout();
+            this.panelPreg2.SuspendLayout();
             this.panelPreg1.SuspendLayout();
             this.panelCorrecto.SuspendLayout();
             this.panelError.SuspendLayout();
-            this.panelPreg2.SuspendLayout();
+            this.panelPreg3.SuspendLayout();
+            this.panelPreg4.SuspendLayout();
+            this.panelFinal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDesaprobado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAprobado)).BeginInit();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -167,6 +191,9 @@
             // 
             this.panelPreg0.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPreg0.BackgroundImage")));
             this.panelPreg0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelPreg0.Controls.Add(this.panelFinal);
+            this.panelPreg0.Controls.Add(this.panelPreg4);
+            this.panelPreg0.Controls.Add(this.panelPreg3);
             this.panelPreg0.Controls.Add(this.panelPreg2);
             this.panelPreg0.Controls.Add(this.panelPreg1);
             this.panelPreg0.Controls.Add(this.panelCorrecto);
@@ -180,6 +207,66 @@
             this.panelPreg0.Name = "panelPreg0";
             this.panelPreg0.Size = new System.Drawing.Size(600, 315);
             this.panelPreg0.TabIndex = 2;
+            // 
+            // panelPreg2
+            // 
+            this.panelPreg2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPreg2.BackgroundImage")));
+            this.panelPreg2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelPreg2.Controls.Add(this.btn2Correcto);
+            this.panelPreg2.Controls.Add(this.btn2B);
+            this.panelPreg2.Controls.Add(this.btn2A);
+            this.panelPreg2.Controls.Add(this.label4);
+            this.panelPreg2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPreg2.Location = new System.Drawing.Point(0, 0);
+            this.panelPreg2.Name = "panelPreg2";
+            this.panelPreg2.Size = new System.Drawing.Size(600, 315);
+            this.panelPreg2.TabIndex = 8;
+            this.panelPreg2.Visible = false;
+            // 
+            // btn2Correcto
+            // 
+            this.btn2Correcto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2Correcto.Location = new System.Drawing.Point(417, 253);
+            this.btn2Correcto.Name = "btn2Correcto";
+            this.btn2Correcto.Size = new System.Drawing.Size(93, 41);
+            this.btn2Correcto.TabIndex = 3;
+            this.btn2Correcto.Text = "Debe Ceder el paso";
+            this.btn2Correcto.UseVisualStyleBackColor = true;
+            this.btn2Correcto.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn2B
+            // 
+            this.btn2B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2B.Location = new System.Drawing.Point(252, 253);
+            this.btn2B.Name = "btn2B";
+            this.btn2B.Size = new System.Drawing.Size(85, 41);
+            this.btn2B.TabIndex = 2;
+            this.btn2B.Text = "Frenarse donde esté";
+            this.btn2B.UseVisualStyleBackColor = true;
+            this.btn2B.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btn2A
+            // 
+            this.btn2A.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2A.Location = new System.Drawing.Point(60, 253);
+            this.btn2A.Name = "btn2A";
+            this.btn2A.Size = new System.Drawing.Size(96, 41);
+            this.btn2A.TabIndex = 1;
+            this.btn2A.Text = "Bajarse del Vehiculo";
+            this.btn2A.UseVisualStyleBackColor = true;
+            this.btn2A.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(540, 50);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "¿Como procede si una ambulancia/pratulla/autobomba \r\nviene detras suyo con las si" +
+    "renas encendidas?";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelPreg1
             // 
@@ -377,62 +464,224 @@
             this.label2.Text = "¿Que es lo primero que debe hacer \r\nal subirse al vehiculo?";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelPreg2
+            // panelPreg3
             // 
-            this.panelPreg2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPreg2.BackgroundImage")));
-            this.panelPreg2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelPreg2.Controls.Add(this.btn2Correcto);
-            this.panelPreg2.Controls.Add(this.btn2B);
-            this.panelPreg2.Controls.Add(this.btn2A);
-            this.panelPreg2.Controls.Add(this.label4);
-            this.panelPreg2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPreg2.Location = new System.Drawing.Point(0, 0);
-            this.panelPreg2.Name = "panelPreg2";
-            this.panelPreg2.Size = new System.Drawing.Size(600, 315);
-            this.panelPreg2.TabIndex = 8;
-            this.panelPreg2.Visible = false;
+            this.panelPreg3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPreg3.BackgroundImage")));
+            this.panelPreg3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelPreg3.Controls.Add(this.btn3B);
+            this.panelPreg3.Controls.Add(this.btn3Correcto);
+            this.panelPreg3.Controls.Add(this.btn3A);
+            this.panelPreg3.Controls.Add(this.label5);
+            this.panelPreg3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPreg3.Location = new System.Drawing.Point(0, 0);
+            this.panelPreg3.Name = "panelPreg3";
+            this.panelPreg3.Size = new System.Drawing.Size(600, 315);
+            this.panelPreg3.TabIndex = 9;
+            this.panelPreg3.Visible = false;
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(540, 50);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "¿Como procede si una ambulancia/pratulla/autobomba \r\nviene detras suyo con las si" +
-    "renas encendidas?";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(55, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(485, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Siempre los sobrepasos se realizan por el carril...";
+            this.label5.Visible = false;
             // 
-            // btn2A
+            // btn3A
             // 
-            this.btn2A.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2A.Location = new System.Drawing.Point(60, 253);
-            this.btn2A.Name = "btn2A";
-            this.btn2A.Size = new System.Drawing.Size(96, 41);
-            this.btn2A.TabIndex = 1;
-            this.btn2A.Text = "Bajarse del Vehiculo";
-            this.btn2A.UseVisualStyleBackColor = true;
+            this.btn3A.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn3A.Location = new System.Drawing.Point(35, 230);
+            this.btn3A.Name = "btn3A";
+            this.btn3A.Size = new System.Drawing.Size(110, 51);
+            this.btn3A.TabIndex = 1;
+            this.btn3A.Text = "No se puede adelantar";
+            this.btn3A.UseVisualStyleBackColor = true;
+            this.btn3A.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btn2B
+            // btn3Correcto
             // 
-            this.btn2B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2B.Location = new System.Drawing.Point(252, 253);
-            this.btn2B.Name = "btn2B";
-            this.btn2B.Size = new System.Drawing.Size(85, 41);
-            this.btn2B.TabIndex = 2;
-            this.btn2B.Text = "Frenarse donde esté";
-            this.btn2B.UseVisualStyleBackColor = true;
+            this.btn3Correcto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn3Correcto.Location = new System.Drawing.Point(225, 230);
+            this.btn3Correcto.Name = "btn3Correcto";
+            this.btn3Correcto.Size = new System.Drawing.Size(124, 51);
+            this.btn3Correcto.TabIndex = 2;
+            this.btn3Correcto.Text = "Por el Carril Izquierdo";
+            this.btn3Correcto.UseVisualStyleBackColor = true;
+            this.btn3Correcto.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btn2Correcto
+            // btn3B
             // 
-            this.btn2Correcto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2Correcto.Location = new System.Drawing.Point(417, 253);
-            this.btn2Correcto.Name = "btn2Correcto";
-            this.btn2Correcto.Size = new System.Drawing.Size(93, 41);
-            this.btn2Correcto.TabIndex = 3;
-            this.btn2Correcto.Text = "Debe Ceder el paso";
-            this.btn2Correcto.UseVisualStyleBackColor = true;
+            this.btn3B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn3B.Location = new System.Drawing.Point(400, 230);
+            this.btn3B.Name = "btn3B";
+            this.btn3B.Size = new System.Drawing.Size(111, 51);
+            this.btn3B.TabIndex = 3;
+            this.btn3B.Text = "Por el Carril Derecho";
+            this.btn3B.UseVisualStyleBackColor = true;
+            this.btn3B.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panelPreg4
+            // 
+            this.panelPreg4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPreg4.BackgroundImage")));
+            this.panelPreg4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelPreg4.Controls.Add(this.btn4B);
+            this.panelPreg4.Controls.Add(this.btn4Correcto);
+            this.panelPreg4.Controls.Add(this.btn4A);
+            this.panelPreg4.Controls.Add(this.label8);
+            this.panelPreg4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPreg4.Location = new System.Drawing.Point(0, 0);
+            this.panelPreg4.Name = "panelPreg4";
+            this.panelPreg4.Size = new System.Drawing.Size(600, 315);
+            this.panelPreg4.TabIndex = 12;
+            this.panelPreg4.Visible = false;
+            // 
+            // btn4B
+            // 
+            this.btn4B.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4B.Location = new System.Drawing.Point(419, 221);
+            this.btn4B.Name = "btn4B";
+            this.btn4B.Size = new System.Drawing.Size(128, 61);
+            this.btn4B.TabIndex = 3;
+            this.btn4B.Text = "Que no estaba habilitado para conducir.";
+            this.btn4B.UseVisualStyleBackColor = true;
+            this.btn4B.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btn4Correcto
+            // 
+            this.btn4Correcto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4Correcto.Location = new System.Drawing.Point(197, 221);
+            this.btn4Correcto.Name = "btn4Correcto";
+            this.btn4Correcto.Size = new System.Drawing.Size(165, 61);
+            this.btn4Correcto.TabIndex = 2;
+            this.btn4Correcto.Text = "Que no obró con intención de provocar un daño.\r\n";
+            this.btn4Correcto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn4Correcto.UseVisualStyleBackColor = true;
+            this.btn4Correcto.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn4A
+            // 
+            this.btn4A.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4A.Location = new System.Drawing.Point(20, 221);
+            this.btn4A.Name = "btn4A";
+            this.btn4A.Size = new System.Drawing.Size(128, 61);
+            this.btn4A.TabIndex = 1;
+            this.btn4A.Text = "actuar con intención de dañar\r\n";
+            this.btn4A.UseVisualStyleBackColor = true;
+            this.btn4A.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(102, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(374, 50);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "¿Qué significa el término “culposo”en \r\nmateria de accidentes de tránsito?";
+            // 
+            // panelFinal
+            // 
+            this.panelFinal.Controls.Add(this.lblCondicion);
+            this.panelFinal.Controls.Add(this.lblTest);
+            this.panelFinal.Controls.Add(this.label9);
+            this.panelFinal.Controls.Add(this.lblResultados);
+            this.panelFinal.Controls.Add(this.label7);
+            this.panelFinal.Controls.Add(this.label6);
+            this.panelFinal.Controls.Add(this.imgDesaprobado);
+            this.panelFinal.Controls.Add(this.imgAprobado);
+            this.panelFinal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFinal.Location = new System.Drawing.Point(0, 0);
+            this.panelFinal.Name = "panelFinal";
+            this.panelFinal.Size = new System.Drawing.Size(600, 315);
+            this.panelFinal.TabIndex = 13;
+            this.panelFinal.Visible = false;
+            // 
+            // lblCondicion
+            // 
+            this.lblCondicion.AutoSize = true;
+            this.lblCondicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCondicion.Location = new System.Drawing.Point(201, 261);
+            this.lblCondicion.Name = "lblCondicion";
+            this.lblCondicion.Size = new System.Drawing.Size(170, 24);
+            this.lblCondicion.TabIndex = 13;
+            this.lblCondicion.Text = "aasdasdasdasdasd";
+            // 
+            // lblTest
+            // 
+            this.lblTest.AutoSize = true;
+            this.lblTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTest.Location = new System.Drawing.Point(116, 137);
+            this.lblTest.Name = "lblTest";
+            this.lblTest.Size = new System.Drawing.Size(45, 16);
+            this.lblTest.TabIndex = 12;
+            this.lblTest.Text = "label8";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(28, 137);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 16);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "El Test está:";
+            // 
+            // lblResultados
+            // 
+            this.lblResultados.AutoSize = true;
+            this.lblResultados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultados.Location = new System.Drawing.Point(202, 93);
+            this.lblResultados.Name = "lblResultados";
+            this.lblResultados.Size = new System.Drawing.Size(45, 16);
+            this.lblResultados.TabIndex = 10;
+            this.lblResultados.Text = "label8";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(28, 91);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(151, 16);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Tus Resultados Fueron:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(127, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(349, 25);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Haz Completado el Test de Manejo";
+            // 
+            // imgDesaprobado
+            // 
+            this.imgDesaprobado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imgDesaprobado.Image = ((System.Drawing.Image)(resources.GetObject("imgDesaprobado.Image")));
+            this.imgDesaprobado.Location = new System.Drawing.Point(0, 0);
+            this.imgDesaprobado.Name = "imgDesaprobado";
+            this.imgDesaprobado.Size = new System.Drawing.Size(600, 315);
+            this.imgDesaprobado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgDesaprobado.TabIndex = 7;
+            this.imgDesaprobado.TabStop = false;
+            this.imgDesaprobado.Visible = false;
+            // 
+            // imgAprobado
+            // 
+            this.imgAprobado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imgAprobado.Image = ((System.Drawing.Image)(resources.GetObject("imgAprobado.Image")));
+            this.imgAprobado.Location = new System.Drawing.Point(0, 0);
+            this.imgAprobado.Name = "imgAprobado";
+            this.imgAprobado.Size = new System.Drawing.Size(600, 315);
+            this.imgAprobado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgAprobado.TabIndex = 6;
+            this.imgAprobado.TabStop = false;
+            this.imgAprobado.Visible = false;
             // 
             // TestManejo
             // 
@@ -452,14 +701,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panelPreg0.ResumeLayout(false);
             this.panelPreg0.PerformLayout();
+            this.panelPreg2.ResumeLayout(false);
+            this.panelPreg2.PerformLayout();
             this.panelPreg1.ResumeLayout(false);
             this.panelPreg1.PerformLayout();
             this.panelCorrecto.ResumeLayout(false);
             this.panelCorrecto.PerformLayout();
             this.panelError.ResumeLayout(false);
             this.panelError.PerformLayout();
-            this.panelPreg2.ResumeLayout(false);
-            this.panelPreg2.PerformLayout();
+            this.panelPreg3.ResumeLayout(false);
+            this.panelPreg3.PerformLayout();
+            this.panelPreg4.ResumeLayout(false);
+            this.panelPreg4.PerformLayout();
+            this.panelFinal.ResumeLayout(false);
+            this.panelFinal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDesaprobado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAprobado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -493,5 +750,24 @@
         private System.Windows.Forms.Button btn2Correcto;
         private System.Windows.Forms.Button btn2B;
         private System.Windows.Forms.Button btn2A;
+        private System.Windows.Forms.Panel panelPreg3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btn3A;
+        private System.Windows.Forms.Button btn3B;
+        private System.Windows.Forms.Button btn3Correcto;
+        private System.Windows.Forms.Panel panelPreg4;
+        private System.Windows.Forms.Button btn4B;
+        private System.Windows.Forms.Button btn4Correcto;
+        private System.Windows.Forms.Button btn4A;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panelFinal;
+        private System.Windows.Forms.Label lblCondicion;
+        private System.Windows.Forms.Label lblTest;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblResultados;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox imgDesaprobado;
+        private System.Windows.Forms.PictureBox imgAprobado;
     }
 }
