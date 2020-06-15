@@ -45,3 +45,4 @@ E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.csproj.GenerateRes
 E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.csproj.CoreCompileInputs.cache
 E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.exe
 E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.pdb
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Creditos.resources

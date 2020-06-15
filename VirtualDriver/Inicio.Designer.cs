@@ -38,15 +38,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnCreditos = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnConfiguracion = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnPractica = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSeñalizacion = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnManejo = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -175,15 +175,15 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.panel5.Controls.Add(this.panel10);
-            this.panel5.Controls.Add(this.button8);
+            this.panel5.Controls.Add(this.btnAyuda);
             this.panel5.Controls.Add(this.panel9);
-            this.panel5.Controls.Add(this.button7);
+            this.panel5.Controls.Add(this.btnCreditos);
             this.panel5.Controls.Add(this.panel8);
-            this.panel5.Controls.Add(this.button6);
+            this.panel5.Controls.Add(this.btnConfiguracion);
             this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.button5);
+            this.panel5.Controls.Add(this.btnPractica);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.button4);
+            this.panel5.Controls.Add(this.btnSeñalizacion);
             this.panel5.Controls.Add(this.panel4);
             this.panel5.Controls.Add(this.btnManejo);
             this.panel5.Controls.Add(this.pictureBox3);
@@ -201,22 +201,22 @@
             this.panel10.Size = new System.Drawing.Size(5, 23);
             this.panel10.TabIndex = 10;
             // 
-            // button8
+            // btnAyuda
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(3, 202);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(116, 23);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "  Ayuda";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAyuda.Location = new System.Drawing.Point(3, 202);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(116, 23);
+            this.btnAyuda.TabIndex = 11;
+            this.btnAyuda.Text = "  Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = false;
             // 
             // panel9
             // 
@@ -226,22 +226,23 @@
             this.panel9.Size = new System.Drawing.Size(5, 23);
             this.panel9.TabIndex = 8;
             // 
-            // button7
+            // btnCreditos
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(3, 173);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(116, 23);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "  Creditos";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnCreditos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCreditos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCreditos.FlatAppearance.BorderSize = 0;
+            this.btnCreditos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnCreditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreditos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCreditos.Image = ((System.Drawing.Image)(resources.GetObject("btnCreditos.Image")));
+            this.btnCreditos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreditos.Location = new System.Drawing.Point(3, 173);
+            this.btnCreditos.Name = "btnCreditos";
+            this.btnCreditos.Size = new System.Drawing.Size(116, 23);
+            this.btnCreditos.TabIndex = 9;
+            this.btnCreditos.Text = "  Creditos";
+            this.btnCreditos.UseVisualStyleBackColor = false;
+            this.btnCreditos.Click += new System.EventHandler(this.btnCreditos_Click);
             // 
             // panel8
             // 
@@ -251,23 +252,23 @@
             this.panel8.Size = new System.Drawing.Size(5, 23);
             this.panel8.TabIndex = 6;
             // 
-            // button6
+            // btnConfiguracion
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(3, 144);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(116, 23);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "   Configuracion";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfiguracion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
+            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguracion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
+            this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguracion.Location = new System.Drawing.Point(3, 144);
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            this.btnConfiguracion.Size = new System.Drawing.Size(116, 23);
+            this.btnConfiguracion.TabIndex = 7;
+            this.btnConfiguracion.Text = "   Configuracion";
+            this.btnConfiguracion.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
@@ -277,24 +278,24 @@
             this.panel7.Size = new System.Drawing.Size(5, 23);
             this.panel7.TabIndex = 4;
             // 
-            // button5
+            // btnPractica
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 115);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(116, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = " Practica";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnPractica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPractica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPractica.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnPractica.FlatAppearance.BorderSize = 0;
+            this.btnPractica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnPractica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPractica.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPractica.Image = ((System.Drawing.Image)(resources.GetObject("btnPractica.Image")));
+            this.btnPractica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPractica.Location = new System.Drawing.Point(3, 86);
+            this.btnPractica.Name = "btnPractica";
+            this.btnPractica.Size = new System.Drawing.Size(116, 23);
+            this.btnPractica.TabIndex = 5;
+            this.btnPractica.Text = " Practica";
+            this.btnPractica.UseVisualStyleBackColor = false;
+            this.btnPractica.Click += new System.EventHandler(this.btnPractica_Click);
             // 
             // panel6
             // 
@@ -304,23 +305,23 @@
             this.panel6.Size = new System.Drawing.Size(5, 23);
             this.panel6.TabIndex = 2;
             // 
-            // button4
+            // btnSeñalizacion
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 86);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "   Señalizaciones";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnSeñalizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnSeñalizacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeñalizacion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnSeñalizacion.FlatAppearance.BorderSize = 0;
+            this.btnSeñalizacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnSeñalizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeñalizacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSeñalizacion.Image = ((System.Drawing.Image)(resources.GetObject("btnSeñalizacion.Image")));
+            this.btnSeñalizacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeñalizacion.Location = new System.Drawing.Point(3, 115);
+            this.btnSeñalizacion.Name = "btnSeñalizacion";
+            this.btnSeñalizacion.Size = new System.Drawing.Size(116, 23);
+            this.btnSeñalizacion.TabIndex = 3;
+            this.btnSeñalizacion.Text = "   Señalizaciones";
+            this.btnSeñalizacion.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -480,15 +481,15 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnCreditos;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnConfiguracion;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnPractica;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSeñalizacion;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnManejo;
         private System.Windows.Forms.PictureBox pictureBox3;
