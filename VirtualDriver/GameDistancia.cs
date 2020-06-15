@@ -192,6 +192,13 @@ namespace VirtualDriver
             this.Hide();
         }
 
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inicio inicio = new Inicio();
+            inicio.Show();
+            this.Hide();
+        }
+
         //CLOSE
         private void GameDistancia_FormClosing(object sender, FormClosingEventArgs e)
         {

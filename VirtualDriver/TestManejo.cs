@@ -14,15 +14,9 @@ namespace VirtualDriver
 {
     public partial class TestManejo : Form
     {
-        
-        
-        
-
         public TestManejo()
         {
             InitializeComponent();
-            
-
         }       
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -136,8 +130,9 @@ namespace VirtualDriver
             }
             else {
                 panelFinal.Visible = true;
+                double resultado = (double)respuestasCorrectas/pnl.Count;
                 lblResultados.Text = respuestasCorrectas.ToString() + " respuestas correctas de " + pnl.Count.ToString() + " posibles.";
-                if ((respuestasCorrectas/pnl.Count) >= 0.7){
+                if (resultado >= 0.7){
                     lblTest.ForeColor = Color.Green;
                     lblTest.Text = "Aprobado";
                     imgAprobado.Visible = true;
@@ -147,7 +142,7 @@ namespace VirtualDriver
                     lblTest.ForeColor = Color.Red;
                     lblTest.Text = "Reprobado";
                     imgDesaprobado.Visible = true;
-                    lblCondicion.Text = "Vuelve a intentar";
+                    lblCondicion.Text = "Vuelve a intentarlo";
                 }
                 
                 /* panelFinal.visible = true*/
