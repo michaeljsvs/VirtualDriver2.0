@@ -134,7 +134,7 @@ namespace VirtualDriver
         {
             if (enemy1.Top >= 500)
             { 
-                x = r.Next(0, 200);
+                x = r.Next(0, 286);
                 //y = r.Next(0, 350);
                 enemy1.Location = new Point(x, 0);
             }
@@ -142,14 +142,14 @@ namespace VirtualDriver
 
             if (enemy2.Top >= 500)
             {
-                x = r.Next(0, 347);
+                x = r.Next(0, 286);
                 enemy2.Location = new Point(x, 0);
             }
             else { enemy2.Top += speed; }
 
             if (enemy3.Top >= 500)
             {
-                x = r.Next(200, 350);
+                x = r.Next(20, 286);
                 enemy3.Location = new Point(x, 0);
             }
             else { enemy3.Top += speed; }
@@ -216,7 +216,7 @@ namespace VirtualDriver
         //KEYUP
         private void GameDistancia_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.W)
+            if (e.KeyCode == Keys.Up)
             {
                 desacelerar = true;
                 up = false;
@@ -226,7 +226,7 @@ namespace VirtualDriver
         //KEYDOWN
         private void GameDistancia_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.A)
+            if (e.KeyCode == Keys.Left)
             {
                 if (car.Left < 380)
                 {
@@ -238,7 +238,7 @@ namespace VirtualDriver
                 }
             }
             
-            if (e.KeyCode == Keys.D)
+            if (e.KeyCode == Keys.Right)
             {
                 if (car.Right < 380)
                 {
@@ -250,7 +250,7 @@ namespace VirtualDriver
                 } 
             }
             
-            if (e.KeyCode == Keys.W)
+            if (e.KeyCode == Keys.Up)
             {
                 if (gamespeed < 6)
                 {
@@ -259,9 +259,9 @@ namespace VirtualDriver
                 }
             }
 
-            if (e.KeyCode == Keys.S)
+            if (e.KeyCode == Keys.Down)
             {
-                if (gamespeed > -4)
+                if (gamespeed > 0)
                     gamespeed --;
             }
         }
