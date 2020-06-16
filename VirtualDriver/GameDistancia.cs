@@ -18,11 +18,15 @@ namespace VirtualDriver
         int x, y;
         bool desacelerar = false;
         bool up = false;
+        int contTime2 = 0;
+        int t3 = 0;
 
         public GameDistancia()
         {
             InitializeComponent();
             over.Visible = false;
+            semaforo.Visible = false;
+            timer3.Stop();
         }
 
         
@@ -40,9 +44,31 @@ namespace VirtualDriver
         private void timer2_Tick(object sender, EventArgs e)
         {
             desacelerarcar();
-            
+            if (contTime2 < 3)
+            {
+                contTime2++;
+                label1.Text = contTime2.ToString();
+                if (contTime2 == 3)
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            t3++;
+            if (t3 == 1)
+                semaforo.Visible = true;
+
+            if (t3 == 2)
+                semaforo.Image = Image.FromFile("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\yellowsf.png");
+
+            if (t3 == 3)
+                semaforo.Image = Image.FromFile("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\redsf.png");
+
+        }
 
         //MOVELINE (Mueve las posiciones de los pictureBox)
         void moveline(int speed)
@@ -198,6 +224,7 @@ namespace VirtualDriver
             inicio.Show();
             this.Hide();
         }
+
 
         //CLOSE
         private void GameDistancia_FormClosing(object sender, FormClosingEventArgs e)

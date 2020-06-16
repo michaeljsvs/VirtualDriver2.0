@@ -49,6 +49,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.semaforo = new System.Windows.Forms.PictureBox();
+            this.senda = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,6 +62,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.semaforo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.senda)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -135,7 +139,7 @@
             // enemy1
             // 
             this.enemy1.Image = ((System.Drawing.Image)(resources.GetObject("enemy1.Image")));
-            this.enemy1.Location = new System.Drawing.Point(50, 154);
+            this.enemy1.Location = new System.Drawing.Point(63, 213);
             this.enemy1.Name = "enemy1";
             this.enemy1.Size = new System.Drawing.Size(29, 58);
             this.enemy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -145,7 +149,7 @@
             // enemy2
             // 
             this.enemy2.Image = ((System.Drawing.Image)(resources.GetObject("enemy2.Image")));
-            this.enemy2.Location = new System.Drawing.Point(252, 79);
+            this.enemy2.Location = new System.Drawing.Point(218, 139);
             this.enemy2.Name = "enemy2";
             this.enemy2.Size = new System.Drawing.Size(29, 58);
             this.enemy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -155,7 +159,7 @@
             // enemy3
             // 
             this.enemy3.Image = ((System.Drawing.Image)(resources.GetObject("enemy3.Image")));
-            this.enemy3.Location = new System.Drawing.Point(307, 225);
+            this.enemy3.Location = new System.Drawing.Point(305, 279);
             this.enemy3.Name = "enemy3";
             this.enemy3.Size = new System.Drawing.Size(29, 58);
             this.enemy3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -176,12 +180,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem,
             this.inicioToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(9, 437);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(384, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(103, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -205,7 +210,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(12, 24);
+            this.label1.Location = new System.Drawing.Point(240, 412);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 20);
             this.label1.TabIndex = 4;
@@ -216,7 +221,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(12, 44);
+            this.label2.Location = new System.Drawing.Point(250, 432);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 20);
             this.label2.TabIndex = 5;
@@ -228,12 +233,38 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Interval = 3000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // semaforo
+            // 
+            this.semaforo.Image = ((System.Drawing.Image)(resources.GetObject("semaforo.Image")));
+            this.semaforo.Location = new System.Drawing.Point(305, -1);
+            this.semaforo.Name = "semaforo";
+            this.semaforo.Size = new System.Drawing.Size(63, 72);
+            this.semaforo.TabIndex = 7;
+            this.semaforo.TabStop = false;
+            // 
+            // senda
+            // 
+            this.senda.Image = ((System.Drawing.Image)(resources.GetObject("senda.Image")));
+            this.senda.Location = new System.Drawing.Point(0, 77);
+            this.senda.Name = "senda";
+            this.senda.Size = new System.Drawing.Size(376, 44);
+            this.senda.TabIndex = 8;
+            this.senda.TabStop = false;
+            // 
             // GameDistancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.senda);
+            this.Controls.Add(this.semaforo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.over);
@@ -268,6 +299,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.semaforo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.senda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +327,7 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
+        private System.Windows.Forms.PictureBox semaforo;
+        private System.Windows.Forms.PictureBox senda;
     }
 }
