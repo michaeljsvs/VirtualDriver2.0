@@ -209,19 +209,19 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(240, 412);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(5, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 20);
+            this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Accidentes = 0";
+            this.label1.Text = "Puntaje = 0";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(250, 432);
+            this.label2.Location = new System.Drawing.Point(254, 441);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 20);
             this.label2.TabIndex = 5;
@@ -242,7 +242,7 @@
             // semaforo
             // 
             this.semaforo.Image = ((System.Drawing.Image)(resources.GetObject("semaforo.Image")));
-            this.semaforo.Location = new System.Drawing.Point(305, -1);
+            this.semaforo.Location = new System.Drawing.Point(321, 53);
             this.semaforo.Name = "semaforo";
             this.semaforo.Size = new System.Drawing.Size(63, 72);
             this.semaforo.TabIndex = 7;
@@ -251,7 +251,7 @@
             // senda
             // 
             this.senda.Image = ((System.Drawing.Image)(resources.GetObject("senda.Image")));
-            this.senda.Location = new System.Drawing.Point(0, 77);
+            this.senda.Location = new System.Drawing.Point(8, 12);
             this.senda.Name = "senda";
             this.senda.Size = new System.Drawing.Size(376, 44);
             this.senda.TabIndex = 8;

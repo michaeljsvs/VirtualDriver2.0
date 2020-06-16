@@ -20,12 +20,17 @@ namespace VirtualDriver
         bool up = false;
         int contTime2 = 0;
         int t3 = 0;
+        bool b3 = false;
+        bool red = false;
+        int puntaje = 0;
 
         public GameDistancia()
         {
             InitializeComponent();
             over.Visible = false;
             semaforo.Visible = false;
+            senda.Visible = false;
+
             timer3.Stop();
         }
 
@@ -35,19 +40,26 @@ namespace VirtualDriver
         //cada cierto tiempo (10 milisegundos) definido por este
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             moveline(gamespeed);
             enemy(gamespeed);
             gameover();
             velocidad();
+            if (b3)
+                sendSema(gamespeed);
+            if (red)
+                gosemaforo();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            puntaje++;
+            label1.Text = "Puntaje = " + puntaje.ToString();
             desacelerarcar();
             if (contTime2 < 3)
             {
                 contTime2++;
-                label1.Text = contTime2.ToString();
+                //label1.Text = contTime2.ToString();
                 if (contTime2 == 3)
                 {
                     timer3.Start();
@@ -58,15 +70,38 @@ namespace VirtualDriver
 
         private void timer3_Tick(object sender, EventArgs e)
         {
+            
             t3++;
             if (t3 == 1)
+            {
                 semaforo.Visible = true;
-
+                senda.Visible = true;
+                b3 = true;
+            }
             if (t3 == 2)
                 semaforo.Image = Image.FromFile("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\yellowsf.png");
 
             if (t3 == 3)
+            {
+                red = true;
                 semaforo.Image = Image.FromFile("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\redsf.png");
+            }
+            
+            if (t3 == 5)
+            {
+                red = false;
+                semaforo.Image = Image.FromFile("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\greensf.png");
+            }
+            if (t3 == 6)
+            {
+                contTime2 = 0;
+                semaforo.Visible = false;
+                senda.Visible = false;
+                t3 = 0;
+                timer3.Stop();
+            }
+            
+
 
         }
 
@@ -120,6 +155,18 @@ namespace VirtualDriver
             else { enemy3.Top += speed; }
         }
 
+        void sendSema(int speed)
+        {
+            if (semaforo.Top >= 500)
+            { semaforo.Top = 0; }
+            else { semaforo.Top += speed; }
+
+            if (senda.Top >= 500)
+            {senda.Top = 0; }
+            else { senda.Top += speed; }
+        }
+
+
         //GAMEOVER
         void gameover()
         {
@@ -142,8 +189,17 @@ namespace VirtualDriver
             }
         }
 
-        //VELOCIDAD
-        void velocidad()
+        void gosemaforo()
+        {
+            if (car.Bounds.IntersectsWith(senda.Bounds))
+            {
+                timer1.Enabled = false;
+                over.Visible = true;
+            }
+        }
+
+            //VELOCIDAD
+            void velocidad()
         {
             label2.Text = "Velocidad = " + gamespeed.ToString();
         }
@@ -160,7 +216,7 @@ namespace VirtualDriver
         //KEYUP
         private void GameDistancia_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.W)
             {
                 desacelerar = true;
                 up = false;
@@ -170,7 +226,7 @@ namespace VirtualDriver
         //KEYDOWN
         private void GameDistancia_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.A)
             {
                 if (car.Left < 380)
                 {
@@ -182,7 +238,7 @@ namespace VirtualDriver
                 }
             }
             
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.D)
             {
                 if (car.Right < 380)
                 {
@@ -194,18 +250,18 @@ namespace VirtualDriver
                 } 
             }
             
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.W)
             {
-                if (gamespeed < 5)
+                if (gamespeed < 6)
                 {
                     gamespeed++;
                     up = true;
                 }
             }
 
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == Keys.S)
             {
-                if (gamespeed > 0)
+                if (gamespeed > -4)
                     gamespeed --;
             }
         }
