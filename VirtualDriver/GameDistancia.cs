@@ -42,7 +42,7 @@ namespace VirtualDriver
         {
             
             moveline(gamespeed);
-            enemy(gamespeed);
+            //enemy(gamespeed);
             gameover();
             velocidad();
             if (b3)
@@ -100,10 +100,9 @@ namespace VirtualDriver
                 t3 = 0;
                 timer3.Stop();
             }
-            
-
-
         }
+
+        
 
         //MOVELINE (Mueve las posiciones de los pictureBox)
         void moveline(int speed)
@@ -127,32 +126,71 @@ namespace VirtualDriver
             { pictureBox4.Top = 0; }
             else { pictureBox4.Top += speed; }
             
+            if (pictureBox7.Top >= 500)
+            { pictureBox7.Top = 0; }
+            else { pictureBox7.Top += speed; }
+
+            if (pictureBox8.Top >= 500)
+            { pictureBox8.Top = 0; }
+            else { pictureBox8.Top += speed; }
+
+            if (pictureBox9.Top >= 500)
+            { pictureBox9.Top = 0; }
+            else { pictureBox9.Top += speed; }
+
+            if (pictureBox10.Top >= 500)
+            { pictureBox10.Top = 0; }
+            else { pictureBox10.Top += speed; }
+            
+        }
+
+        private void enemy1timer_Tick(object sender, EventArgs e)
+        {
+            x = r.Next(-3, 3);
+            movenemy1(gamespeed + x);
+        }
+
+        private void enemy2timer_Tick(object sender, EventArgs e)
+        {
+            x = r.Next(-3, 3);
+            movenemy2(gamespeed + x);
+        }
+
+        private void enemy3timer_Tick(object sender, EventArgs e)
+        {
+            x = r.Next(-3, 3);
+            movenemy3(gamespeed + x);
         }
 
         //ENEMY
-        void enemy(int speed)
+        void movenemy1(int speed)
         {
             if (enemy1.Top >= 500)
             { 
-                x = r.Next(0, 286);
-                //y = r.Next(0, 350);
-                enemy1.Location = new Point(x, 0);
+                //x = r.Next(0, 286);
+                enemy1.Location = new Point(36, 0);
             }
             else { enemy1.Top += speed; }
-
+        }
+        
+        void movenemy2(int speed)
+        {
             if (enemy2.Top >= 500)
             {
-                x = r.Next(0, 286);
-                enemy2.Location = new Point(x, 0);
+                //x = r.Next(0, 286);
+                enemy2.Location = new Point(136, 0);
             }
             else { enemy2.Top += speed; }
-
-            if (enemy3.Top >= 500)
+        }
+        
+        void movenemy3(int speed)
+        {
+            if (enemy3.Top <= 0)
             {
-                x = r.Next(20, 286);
-                enemy3.Location = new Point(x, 0);
+                //x = r.Next(20, 286);
+                enemy3.Location = new Point(228, 500);
             }
-            else { enemy3.Top += speed; }
+            else { enemy3.Top -= speed; }
         }
 
         void sendSema(int speed)
@@ -187,6 +225,7 @@ namespace VirtualDriver
                 timer1.Enabled = false;
                 over.Visible = true;
             }
+
         }
 
         void gosemaforo()
@@ -198,8 +237,8 @@ namespace VirtualDriver
             }
         }
 
-            //VELOCIDAD
-            void velocidad()
+        //VELOCIDAD
+        void velocidad()
         {
             label2.Text = "Velocidad = " + gamespeed.ToString();
         }
@@ -280,6 +319,12 @@ namespace VirtualDriver
             inicio.Show();
             this.Hide();
         }
+
+        
+
+
+
+
 
 
         //CLOSE

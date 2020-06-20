@@ -44,13 +44,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.semaforo = new System.Windows.Forms.PictureBox();
-            this.senda = new System.Windows.Forms.PictureBox();
             this.enemy1 = new System.Windows.Forms.PictureBox();
             this.enemy2 = new System.Windows.Forms.PictureBox();
             this.enemy3 = new System.Windows.Forms.PictureBox();
             this.car = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.senda = new System.Windows.Forms.PictureBox();
+            this.semaforo = new System.Windows.Forms.PictureBox();
             this.over = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.enemy1timer = new System.Windows.Forms.Timer(this.components);
+            this.enemy2timer = new System.Windows.Forms.Timer(this.components);
+            this.enemy3timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -58,19 +66,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.semaforo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.senda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.car)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.senda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semaforo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.over)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox1.Location = new System.Drawing.Point(193, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(95, -4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(10, 90);
             this.pictureBox1.TabIndex = 0;
@@ -79,7 +92,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox2.Location = new System.Drawing.Point(193, 122);
+            this.pictureBox2.Location = new System.Drawing.Point(95, 118);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(10, 90);
             this.pictureBox2.TabIndex = 0;
@@ -88,7 +101,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox3.Location = new System.Drawing.Point(193, 247);
+            this.pictureBox3.Location = new System.Drawing.Point(95, 239);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(10, 90);
             this.pictureBox3.TabIndex = 0;
@@ -97,7 +110,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox4.Location = new System.Drawing.Point(193, 371);
+            this.pictureBox4.Location = new System.Drawing.Point(95, 357);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(10, 90);
             this.pictureBox4.TabIndex = 0;
@@ -135,7 +148,7 @@
             this.inicioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(9, 437);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(223, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(103, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -189,28 +202,10 @@
             this.timer3.Interval = 3000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // semaforo
-            // 
-            this.semaforo.Image = ((System.Drawing.Image)(resources.GetObject("semaforo.Image")));
-            this.semaforo.Location = new System.Drawing.Point(313, 60);
-            this.semaforo.Name = "semaforo";
-            this.semaforo.Size = new System.Drawing.Size(63, 72);
-            this.semaforo.TabIndex = 7;
-            this.semaforo.TabStop = false;
-            // 
-            // senda
-            // 
-            this.senda.Image = ((System.Drawing.Image)(resources.GetObject("senda.Image")));
-            this.senda.Location = new System.Drawing.Point(0, 22);
-            this.senda.Name = "senda";
-            this.senda.Size = new System.Drawing.Size(376, 44);
-            this.senda.TabIndex = 8;
-            this.senda.TabStop = false;
-            // 
             // enemy1
             // 
             this.enemy1.Image = ((System.Drawing.Image)(resources.GetObject("enemy1.Image")));
-            this.enemy1.Location = new System.Drawing.Point(63, 203);
+            this.enemy1.Location = new System.Drawing.Point(37, 271);
             this.enemy1.Name = "enemy1";
             this.enemy1.Size = new System.Drawing.Size(29, 58);
             this.enemy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -220,7 +215,7 @@
             // enemy2
             // 
             this.enemy2.Image = ((System.Drawing.Image)(resources.GetObject("enemy2.Image")));
-            this.enemy2.Location = new System.Drawing.Point(235, 105);
+            this.enemy2.Location = new System.Drawing.Point(136, 271);
             this.enemy2.Name = "enemy2";
             this.enemy2.Size = new System.Drawing.Size(29, 58);
             this.enemy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -230,7 +225,7 @@
             // enemy3
             // 
             this.enemy3.Image = ((System.Drawing.Image)(resources.GetObject("enemy3.Image")));
-            this.enemy3.Location = new System.Drawing.Point(283, 279);
+            this.enemy3.Location = new System.Drawing.Point(227, 271);
             this.enemy3.Name = "enemy3";
             this.enemy3.Size = new System.Drawing.Size(29, 58);
             this.enemy3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -240,22 +235,104 @@
             // car
             // 
             this.car.Image = ((System.Drawing.Image)(resources.GetObject("car.Image")));
-            this.car.Location = new System.Drawing.Point(46, 371);
+            this.car.Location = new System.Drawing.Point(319, 271);
             this.car.Name = "car";
             this.car.Size = new System.Drawing.Size(29, 58);
             this.car.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.car.TabIndex = 12;
             this.car.TabStop = false;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox7.Location = new System.Drawing.Point(281, -1);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(10, 90);
+            this.pictureBox7.TabIndex = 14;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox8.Location = new System.Drawing.Point(281, 118);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(10, 90);
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox9.Location = new System.Drawing.Point(281, 239);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(10, 90);
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox10.Location = new System.Drawing.Point(281, 357);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(10, 90);
+            this.pictureBox10.TabIndex = 0;
+            this.pictureBox10.TabStop = false;
+            // 
+            // senda
+            // 
+            this.senda.Image = ((System.Drawing.Image)(resources.GetObject("senda.Image")));
+            this.senda.Location = new System.Drawing.Point(0, 22);
+            this.senda.Name = "senda";
+            this.senda.Size = new System.Drawing.Size(376, 44);
+            this.senda.TabIndex = 16;
+            this.senda.TabStop = false;
+            // 
+            // semaforo
+            // 
+            this.semaforo.Image = ((System.Drawing.Image)(resources.GetObject("semaforo.Image")));
+            this.semaforo.Location = new System.Drawing.Point(337, 12);
+            this.semaforo.Name = "semaforo";
+            this.semaforo.Size = new System.Drawing.Size(47, 54);
+            this.semaforo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.semaforo.TabIndex = 17;
+            this.semaforo.TabStop = false;
+            // 
             // over
             // 
             this.over.Image = ((System.Drawing.Image)(resources.GetObject("over.Image")));
-            this.over.Location = new System.Drawing.Point(109, 195);
+            this.over.Location = new System.Drawing.Point(213, -4);
             this.over.Name = "over";
-            this.over.Size = new System.Drawing.Size(168, 154);
+            this.over.Size = new System.Drawing.Size(62, 70);
             this.over.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.over.TabIndex = 13;
+            this.over.TabIndex = 18;
             this.over.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Gold;
+            this.pictureBox11.Location = new System.Drawing.Point(193, -1);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(14, 462);
+            this.pictureBox11.TabIndex = 0;
+            this.pictureBox11.TabStop = false;
+            // 
+            // enemy1timer
+            // 
+            this.enemy1timer.Enabled = true;
+            this.enemy1timer.Interval = 10;
+            this.enemy1timer.Tick += new System.EventHandler(this.enemy1timer_Tick);
+            // 
+            // enemy2timer
+            // 
+            this.enemy2timer.Enabled = true;
+            this.enemy2timer.Interval = 10;
+            this.enemy2timer.Tick += new System.EventHandler(this.enemy2timer_Tick);
+            // 
+            // enemy3timer
+            // 
+            this.enemy3timer.Enabled = true;
+            this.enemy3timer.Interval = 10;
+            this.enemy3timer.Tick += new System.EventHandler(this.enemy3timer_Tick);
             // 
             // GameDistancia
             // 
@@ -264,18 +341,23 @@
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(384, 461);
             this.Controls.Add(this.over);
+            this.Controls.Add(this.semaforo);
+            this.Controls.Add(this.senda);
+            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.car);
             this.Controls.Add(this.enemy3);
             this.Controls.Add(this.enemy2);
             this.Controls.Add(this.enemy1);
-            this.Controls.Add(this.senda);
-            this.Controls.Add(this.semaforo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
@@ -295,13 +377,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.semaforo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.senda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.car)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.senda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semaforo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.over)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,12 +410,20 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
-        private System.Windows.Forms.PictureBox semaforo;
-        private System.Windows.Forms.PictureBox senda;
         private System.Windows.Forms.PictureBox enemy1;
         private System.Windows.Forms.PictureBox enemy2;
         private System.Windows.Forms.PictureBox enemy3;
         private System.Windows.Forms.PictureBox car;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox senda;
+        private System.Windows.Forms.PictureBox semaforo;
         private System.Windows.Forms.PictureBox over;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Timer enemy1timer;
+        private System.Windows.Forms.Timer enemy2timer;
+        private System.Windows.Forms.Timer enemy3timer;
     }
 }
