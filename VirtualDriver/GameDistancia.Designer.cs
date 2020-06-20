@@ -135,7 +135,7 @@
             this.inicioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(9, 437);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(103, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(223, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -192,7 +192,7 @@
             // semaforo
             // 
             this.semaforo.Image = ((System.Drawing.Image)(resources.GetObject("semaforo.Image")));
-            this.semaforo.Location = new System.Drawing.Point(321, 53);
+            this.semaforo.Location = new System.Drawing.Point(313, 60);
             this.semaforo.Name = "semaforo";
             this.semaforo.Size = new System.Drawing.Size(63, 72);
             this.semaforo.TabIndex = 7;
@@ -201,7 +201,7 @@
             // senda
             // 
             this.senda.Image = ((System.Drawing.Image)(resources.GetObject("senda.Image")));
-            this.senda.Location = new System.Drawing.Point(8, 12);
+            this.senda.Location = new System.Drawing.Point(0, 22);
             this.senda.Name = "senda";
             this.senda.Size = new System.Drawing.Size(376, 44);
             this.senda.TabIndex = 8;
@@ -220,7 +220,7 @@
             // enemy2
             // 
             this.enemy2.Image = ((System.Drawing.Image)(resources.GetObject("enemy2.Image")));
-            this.enemy2.Location = new System.Drawing.Point(228, 131);
+            this.enemy2.Location = new System.Drawing.Point(235, 105);
             this.enemy2.Name = "enemy2";
             this.enemy2.Size = new System.Drawing.Size(29, 58);
             this.enemy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

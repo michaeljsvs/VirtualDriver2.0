@@ -252,7 +252,7 @@ namespace VirtualDriver
             
             if (e.KeyCode == Keys.Up)
             {
-                if (gamespeed < 6)
+                if (gamespeed < 4)
                 {
                     gamespeed++;
                     up = true;
