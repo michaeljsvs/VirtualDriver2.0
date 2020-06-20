@@ -64,22 +64,22 @@ namespace VirtualDriver
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        public string[,] Preguntas = new string[15,3] { 
-            { "¿Que es lo primero que debe hacer" + "\r\n" + "al subirse al vehiculo?","No usado" ,"0" },
-            { "¿Que debe hacer al consmir bebidas alcoholicas?", "No Usado", "1" },
-            { "¿Como procede si una ambulancia/pratulla/autobomba " + "\r\n" + "viene detras suyo con las sirenas encendidas?", "No Usado", "2" },
-            { "Siempre los sobrepasos se realizan por el carril...", "No Usado", "3" },
-            { "¿Qué significa el término “culposo”" + "\r\n" + "en materia de accidentes de tránsito?", "No Usado", "4" },
-            { "Estás llegando a un cruce de calles y una" + "\r\n" + "persona está cruzando por la senda, Ud.debe:", "No Usado", "5" },
-            { "Según la Ley N° 2148, en una autopista está prohibido:", "No Usado", "6" },
-            { "En caso de un siniestro vial, ¿Cuánto tiempo" + "\r\n" + "se dispone para dar aviso al seguro?", "No Usado", "7" },
-            { "¿Todo vehículo debe estar cubierto por un seguro?", "No Usado", "8" },
-            { "¿Cuál es el objetivo de la Verificación Técnica Vehicular?", "No Usado", "9" },
-            { "¿Qué consecuencias tiene conducir habiendo" + "\r\n" + "dormido pocas horas previamente?", "No Usado", "10" },
-            { "Si un conductor necesita realizar una" + "\r\n" + "llamada de urgencia, ¿quédebe hacer", "No Usado", "11" },
-            { "¿Que funcion cumplen las señales de prevencion?", "No Usado", "12" },
-            { "¿Está permitido conducir en la vía pública con auriculares puestos?", "No Usado", "13" },
-            { "Está atravesando un cruce de avenidas" + "\r\n" + "sin semáforos a 30 Km/h, Ud. está:", "No Usado", "14" },
+        public string[,] Preguntas = new string[15,3] {
+            {"¿Que es lo primero que debe hacer" + "\r\n" + "al subirse al vehiculo?","No usado" ,"0" },
+            {"¿Que debe hacer al consmir bebidas alcoholicas?", "No Usado", "1" },
+            {"¿Como procede si una ambulancia/pratulla/autobomba " + "\r\n" + "viene detras suyo con las sirenas encendidas?", "No Usado", "2" },
+            {"Siempre los sobrepasos se realizan por el carril...", "No Usado", "3" },
+            {"¿Qué significa el término “culposo”" + "\r\n" + "en materia de accidentes de tránsito?", "No Usado", "4" },
+            {"Estás llegando a un cruce de calles y una" + "\r\n" + "persona está cruzando por la senda, Ud.debe:", "No Usado", "5" },
+            {"¿Cuándo se pierde la prioridad de paso de mano derecha?", "No Usado", "6" },
+            {"¿En qué casos la autoridad de control puede retener su licencia de conducir?", "No Usado", "7" },
+            {"¿Todo vehículo debe estar cubierto por un seguro?", "No Usado", "8" },
+            {"¿Cuál es el objetivo de la Inspección Técnica Vehicular?", "No Usado", "9" },
+            {"¿Qué consecuencias tiene conducir habiendo" + "\r\n" + "dormido pocas horas previamente?", "No Usado", "10" },
+            {"Si un conductor necesita realizar una" + "\r\n" + "llamada de urgencia, ¿quédebe hacer", "No Usado", "11" },
+            {"¿Que funcion cumplen las señales de prevencion?", "No Usado", "12" },
+            {"¿Está permitido conducir en la vía pública con auriculares puestos?", "No Usado", "13" },
+            {"La “Senda peatonal” está destinada:", "No Usado", "14" },
         };
 
         private void button1_Click(object sender, EventArgs e)
@@ -115,6 +115,16 @@ namespace VirtualDriver
             pnl.Add(panelPreg2);
             pnl.Add(panelPreg3);
             pnl.Add(panelPreg4);
+            pnl.Add(panelPreg5);
+            pnl.Add(panelPreg6);
+            pnl.Add(panelPreg7);
+            pnl.Add(panelPreg8);
+            pnl.Add(panelPreg9);
+            pnl.Add(panelPreg10);
+            pnl.Add(panelPreg11);
+            pnl.Add(panelPreg12);
+            pnl.Add(panelPreg13);
+            pnl.Add(panelPreg14);
 
             if (pnl.Count > preguntaActual)
             {
