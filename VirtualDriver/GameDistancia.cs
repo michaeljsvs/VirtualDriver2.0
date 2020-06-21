@@ -15,34 +15,46 @@ namespace VirtualDriver
         //VARIABLES
         int gamespeed = 0;
         Random r = new Random();
-        int x, y;
+        int x;
+        int ve1 = 1;
+        int ve2 = 1;
+        int ve3 = 1;
         bool desacelerar = false;
         bool up = false;
         int contTime2 = 0;
         int t3 = 0;
-        bool b3 = false;
+        bool b3, c1, c2, c3 = false;
         bool red = false;
         int puntaje = 0;
+        int inf = 0;
 
+        bool hb = false;
+
+        //Inicializacion
         public GameDistancia()
         {
             InitializeComponent();
-            over.Visible = false;
+            cop.Visible = false;
             semaforo.Visible = false;
             senda.Visible = false;
 
             timer3.Stop();
         }
 
-        
+
         //TIMERS
         //generan eventos definidos por el usuario,
         //cada cierto tiempo (10 milisegundos) definido por este
+        //TIMER 1
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-            moveline(gamespeed);
-            //enemy(gamespeed);
+            putinf();
+            moveline(gamespeed); //Lineas Blancas
+
+            movenemy1(ve1 + gamespeed);
+            movenemy2(ve2 + gamespeed);
+            movenemy3(ve3 - gamespeed);
+
             gameover();
             velocidad();
             if (b3)
@@ -51,10 +63,43 @@ namespace VirtualDriver
                 gosemaforo();
         }
 
+        void putinf()
+        {
+            if (car.Bounds.IntersectsWith(senda.Bounds))
+            {
+                if (car.Location.X > 210)
+                {
+                    if (hb == false)
+                    {
+                        puntaje++;
+                        label1.Text = "Puntaje = " + puntaje.ToString();
+                        hb = true;
+                    }
+                }
+                else
+                {
+                    if (hb == false)
+                    {
+                        inf++;
+                        Infracciones.Text = "Infracciones = " + inf.ToString();
+                        hb = true;
+                    }
+
+                }
+            }
+            else
+            {
+                hb = false;
+            }
+        }
+
+        //TIMER 2
         private void timer2_Tick(object sender, EventArgs e)
         {
-            puntaje++;
-            label1.Text = "Puntaje = " + puntaje.ToString();
+            //Label 1
+
+
+
             desacelerarcar();
             if (contTime2 < 3)
             {
@@ -68,9 +113,10 @@ namespace VirtualDriver
             }
         }
 
+        //TIMER 3 (Semaforo, senda)
         private void timer3_Tick(object sender, EventArgs e)
         {
-            
+
             t3++;
             if (t3 == 1)
             {
@@ -86,7 +132,7 @@ namespace VirtualDriver
                 red = true;
                 semaforo.Image = Image.FromFile("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\redsf.png");
             }
-            
+
             if (t3 == 5)
             {
                 red = false;
@@ -95,20 +141,18 @@ namespace VirtualDriver
             if (t3 == 6)
             {
                 contTime2 = 0;
-                semaforo.Visible = false;
-                senda.Visible = false;
                 t3 = 0;
                 timer3.Stop();
             }
         }
 
-        
 
-        //MOVELINE (Mueve las posiciones de los pictureBox)
+
+        //LINEAS BLANCAS (Mueve las posiciones de los pictureBox)
         void moveline(int speed)
         {
             //TOP: obtiene o establece la distancia en pixeles
-            //desde el bode superior del control (picture box)
+            //desde el borde superior del control (picture box)
             //y el borde superior del contenedor (el Form en nuesto caso)
             if (pictureBox1.Top >= 500)
             { pictureBox1.Top = 0; }
@@ -125,7 +169,7 @@ namespace VirtualDriver
             if (pictureBox4.Top >= 500)
             { pictureBox4.Top = 0; }
             else { pictureBox4.Top += speed; }
-            
+
             if (pictureBox7.Top >= 500)
             { pictureBox7.Top = 0; }
             else { pictureBox7.Top += speed; }
@@ -141,53 +185,45 @@ namespace VirtualDriver
             if (pictureBox10.Top >= 500)
             { pictureBox10.Top = 0; }
             else { pictureBox10.Top += speed; }
-            
-        }
 
-        private void enemy1timer_Tick(object sender, EventArgs e)
-        {
-            x = r.Next(-3, 3);
-            movenemy1(gamespeed + x);
-        }
-
-        private void enemy2timer_Tick(object sender, EventArgs e)
-        {
-            x = r.Next(-3, 3);
-            movenemy2(gamespeed + x);
-        }
-
-        private void enemy3timer_Tick(object sender, EventArgs e)
-        {
-            x = r.Next(-3, 3);
-            movenemy3(gamespeed + x);
         }
 
         //ENEMY
         void movenemy1(int speed)
         {
             if (enemy1.Top >= 500)
-            { 
+            {
                 //x = r.Next(0, 286);
+                ve1 = r.Next(1, 5);
                 enemy1.Location = new Point(36, 0);
             }
             else { enemy1.Top += speed; }
         }
-        
+
         void movenemy2(int speed)
         {
             if (enemy2.Top >= 500)
             {
                 //x = r.Next(0, 286);
+                ve2 = r.Next(1, 5);
                 enemy2.Location = new Point(136, 0);
             }
             else { enemy2.Top += speed; }
         }
-        
+
         void movenemy3(int speed)
         {
             if (enemy3.Top <= 0)
             {
                 //x = r.Next(20, 286);
+                ve3 = r.Next(1, 5);
+                enemy3.Location = new Point(228, 500);
+            }
+            else { enemy3.Top -= speed; }
+
+            if (enemy3.Top >= 501)
+            {
+                ve3 = r.Next(1, 5);
                 enemy3.Location = new Point(228, 500);
             }
             else { enemy3.Top -= speed; }
@@ -200,7 +236,7 @@ namespace VirtualDriver
             else { semaforo.Top += speed; }
 
             if (senda.Top >= 500)
-            {senda.Top = 0; }
+            { senda.Top = 0; }
             else { senda.Top += speed; }
         }
 
@@ -211,19 +247,19 @@ namespace VirtualDriver
             if (car.Bounds.IntersectsWith(enemy1.Bounds))
             {
                 timer1.Enabled = false;
-                over.Visible = true;
+                cop.Visible = true;
             }
 
             if (car.Bounds.IntersectsWith(enemy2.Bounds))
             {
                 timer1.Enabled = false;
-                over.Visible = true;
+                cop.Visible = true;
             }
 
             if (car.Bounds.IntersectsWith(enemy3.Bounds))
             {
                 timer1.Enabled = false;
-                over.Visible = true;
+                cop.Visible = true;
             }
 
         }
@@ -232,8 +268,16 @@ namespace VirtualDriver
         {
             if (car.Bounds.IntersectsWith(senda.Bounds))
             {
-                timer1.Enabled = false;
-                over.Visible = true;
+                if (hb == false)
+                {
+                    inf ++;
+                    Infracciones.Text = "Infracciones = " + inf.ToString();
+                    hb = true;
+                }
+            }
+            else
+            {
+                hb = false;
             }
         }
 
@@ -276,7 +320,7 @@ namespace VirtualDriver
                     }
                 }
             }
-            
+
             if (e.KeyCode == Keys.Right)
             {
                 if (car.Right < 380)
@@ -286,12 +330,12 @@ namespace VirtualDriver
                     {
                         desacelerar = false;
                     }
-                } 
+                }
             }
-            
+
             if (e.KeyCode == Keys.Up)
             {
-                if (gamespeed < 4)
+                if (gamespeed < 5)
                 {
                     gamespeed++;
                     up = true;
@@ -301,7 +345,7 @@ namespace VirtualDriver
             if (e.KeyCode == Keys.Down)
             {
                 if (gamespeed > 0)
-                    gamespeed --;
+                    gamespeed--;
             }
         }
 
@@ -320,19 +364,10 @@ namespace VirtualDriver
             this.Hide();
         }
 
-        
-
-
-
-
-
-
         //CLOSE
         private void GameDistancia_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
     }
-
-
 }

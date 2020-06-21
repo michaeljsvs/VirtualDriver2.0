@@ -54,11 +54,12 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.senda = new System.Windows.Forms.PictureBox();
             this.semaforo = new System.Windows.Forms.PictureBox();
-            this.over = new System.Windows.Forms.PictureBox();
+            this.cop = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.enemy1timer = new System.Windows.Forms.Timer(this.components);
             this.enemy2timer = new System.Windows.Forms.Timer(this.components);
             this.enemy3timer = new System.Windows.Forms.Timer(this.components);
+            this.Infracciones = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -76,7 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.senda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.semaforo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.over)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,7 +174,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(5, -1);
+            this.label1.Location = new System.Drawing.Point(12, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 4;
@@ -235,7 +236,7 @@
             // car
             // 
             this.car.Image = ((System.Drawing.Image)(resources.GetObject("car.Image")));
-            this.car.Location = new System.Drawing.Point(319, 271);
+            this.car.Location = new System.Drawing.Point(319, 357);
             this.car.Name = "car";
             this.car.Size = new System.Drawing.Size(29, 58);
             this.car.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -281,7 +282,7 @@
             // senda
             // 
             this.senda.Image = ((System.Drawing.Image)(resources.GetObject("senda.Image")));
-            this.senda.Location = new System.Drawing.Point(0, 22);
+            this.senda.Location = new System.Drawing.Point(0, 68);
             this.senda.Name = "senda";
             this.senda.Size = new System.Drawing.Size(376, 44);
             this.senda.TabIndex = 16;
@@ -290,22 +291,22 @@
             // semaforo
             // 
             this.semaforo.Image = ((System.Drawing.Image)(resources.GetObject("semaforo.Image")));
-            this.semaforo.Location = new System.Drawing.Point(337, 12);
+            this.semaforo.Location = new System.Drawing.Point(329, 58);
             this.semaforo.Name = "semaforo";
             this.semaforo.Size = new System.Drawing.Size(47, 54);
             this.semaforo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.semaforo.TabIndex = 17;
             this.semaforo.TabStop = false;
             // 
-            // over
+            // cop
             // 
-            this.over.Image = ((System.Drawing.Image)(resources.GetObject("over.Image")));
-            this.over.Location = new System.Drawing.Point(213, -4);
-            this.over.Name = "over";
-            this.over.Size = new System.Drawing.Size(62, 70);
-            this.over.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.over.TabIndex = 18;
-            this.over.TabStop = false;
+            this.cop.Image = ((System.Drawing.Image)(resources.GetObject("cop.Image")));
+            this.cop.Location = new System.Drawing.Point(213, 42);
+            this.cop.Name = "cop";
+            this.cop.Size = new System.Drawing.Size(62, 70);
+            this.cop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cop.TabIndex = 18;
+            this.cop.TabStop = false;
             // 
             // pictureBox11
             // 
@@ -320,19 +321,27 @@
             // 
             this.enemy1timer.Enabled = true;
             this.enemy1timer.Interval = 10;
-            this.enemy1timer.Tick += new System.EventHandler(this.enemy1timer_Tick);
             // 
             // enemy2timer
             // 
             this.enemy2timer.Enabled = true;
             this.enemy2timer.Interval = 10;
-            this.enemy2timer.Tick += new System.EventHandler(this.enemy2timer_Tick);
             // 
             // enemy3timer
             // 
             this.enemy3timer.Enabled = true;
             this.enemy3timer.Interval = 10;
-            this.enemy3timer.Tick += new System.EventHandler(this.enemy3timer_Tick);
+            // 
+            // Infracciones
+            // 
+            this.Infracciones.AutoSize = true;
+            this.Infracciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Infracciones.ForeColor = System.Drawing.Color.Red;
+            this.Infracciones.Location = new System.Drawing.Point(234, -1);
+            this.Infracciones.Name = "Infracciones";
+            this.Infracciones.Size = new System.Drawing.Size(138, 20);
+            this.Infracciones.TabIndex = 19;
+            this.Infracciones.Text = "Infracciones = 0";
             // 
             // GameDistancia
             // 
@@ -340,7 +349,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(384, 461);
-            this.Controls.Add(this.over);
+            this.Controls.Add(this.Infracciones);
+            this.Controls.Add(this.cop);
             this.Controls.Add(this.semaforo);
             this.Controls.Add(this.senda);
             this.Controls.Add(this.pictureBox7);
@@ -387,7 +397,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.senda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.semaforo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.over)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -420,10 +430,11 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox senda;
         private System.Windows.Forms.PictureBox semaforo;
-        private System.Windows.Forms.PictureBox over;
+        private System.Windows.Forms.PictureBox cop;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Timer enemy1timer;
         private System.Windows.Forms.Timer enemy2timer;
         private System.Windows.Forms.Timer enemy3timer;
+        private System.Windows.Forms.Label Infracciones;
     }
 }
