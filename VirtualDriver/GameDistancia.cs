@@ -33,6 +33,8 @@ namespace VirtualDriver
         bool desactivarcartel = false;
 
         bool hb = false;
+        bool siga = false;
+        bool pare = false;
 
         //Inicializacion
         public GameDistancia()
@@ -57,19 +59,29 @@ namespace VirtualDriver
             {
                 cartelcop.Text = "PARE!";
                 cartelcop.ForeColor = Color.Red;
+                pare = true;
                 ///////////////
                 cartelcop.Top = semaforo.Top + 57;
                 cop.Top = cartelcop.Top + 19;
                 ///////////////
                 cop.Visible = true;
                 cartelcop.Visible = true;
-                ///////////////
-                if (cop.Top >= 460)
-                { 
+                if (t3 == 4 && desactivarcartel)
+                {
+                    cartelcop.Text = "SIGA";
+                    cartelcop.ForeColor = Color.Green;
+                    siga = true;
+                    pare = false;
+                }
+
+                if (cop.Top >= 500)
+                {
                     cop.Visible = false;
                     aparececop = false;
                     cartelcop.Visible = false;
                     desactivarcartel = false;
+                    siga = false;
+                    pare = false;
                 }
                 else 
                 {
@@ -77,14 +89,7 @@ namespace VirtualDriver
                     cartelcop.Top += gamespeed;
                 }
             }
-
-            if (desactivarcartel)
-            {
-                cartelcop.Text = "SIGA";
-                cartelcop.ForeColor = Color.Green;
-            }
-
-            putinf();
+            
             moveline(gamespeed); //Lineas Blancas
 
             movenemy1(ve1 + gamespeed);
@@ -95,8 +100,15 @@ namespace VirtualDriver
             velocidad();
             if (b3)
                 sendSema(gamespeed);
+
             if (red)
+            {
                 gosemaforo();
+            }    
+            else 
+            {
+                putinf();
+            }
         }
 
         void putinf()
@@ -108,9 +120,19 @@ namespace VirtualDriver
                 {
                     if (hb == false)
                     {
-                        puntaje++;
-                        label1.Text = "Puntaje = " + puntaje.ToString();
-                        hb = true;
+                        if (pare == false)
+                        {
+                            puntaje++;
+                            label1.Text = "Puntaje = " + puntaje.ToString();
+                            hb = true;
+                        }
+                        else
+                        {
+                            inf++;
+                            Infracciones.Text = "Infracciones = " + inf.ToString();
+                            hb = true;
+                        }
+                        
                     }
                 }
                 else
@@ -129,6 +151,33 @@ namespace VirtualDriver
                 hb = false;
             }
         }
+
+        void gosemaforo()
+        {
+            if (car.Bounds.IntersectsWith(senda.Bounds))
+            {
+                if (hb == false)
+                {
+                    if (siga == false)
+                    {
+                        inf++;
+                        Infracciones.Text = "Infracciones = " + inf.ToString();
+                        hb = true;
+                    }
+                    else
+                    {
+                        puntaje++;
+                        label1.Text = "Puntaje = " + puntaje.ToString();
+                        hb = true;
+                    }
+                }
+            }
+            else
+            {
+                hb = false;
+            }
+        }
+
 
         //TIMER 2
         private void timer2_Tick(object sender, EventArgs e)
@@ -158,6 +207,7 @@ namespace VirtualDriver
                 if (contAparicionCop == 2 || contAparicionCop == 4)
                 {
                     aparececop = true;
+
                 }
                 semaforo.Visible = true;
                 senda.Visible = true;
@@ -167,14 +217,14 @@ namespace VirtualDriver
 
             if (t3 == 2)
             {
-                semaforo.Image = Image.FromFile("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\yellowsf.png");
+                semaforo.Image = Properties.Resources.yellowsf;
             }
                 
 
             if (t3 == 3)
             {
                 red = true;
-                semaforo.Image = Image.FromFile("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\redsf.png");
+                semaforo.Image = Properties.Resources.redsf;
             }
 
             if (t3 == 4)
@@ -186,7 +236,7 @@ namespace VirtualDriver
             if (t3 == 5)
             {
                 red = false;
-                semaforo.Image = Image.FromFile("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\greensf.png");
+                semaforo.Image = Properties.Resources.greensf;
             }
             if (t3 == 6)
             {
@@ -327,22 +377,6 @@ namespace VirtualDriver
 
         }
 
-        void gosemaforo()
-        {
-            if (car.Bounds.IntersectsWith(senda.Bounds))
-            {
-                if (hb == false)
-                {
-                    inf ++;
-                    Infracciones.Text = "Infracciones = " + inf.ToString();
-                    hb = true;
-                }
-            }
-            else
-            {
-                hb = false;
-            }
-        }
 
         //VELOCIDAD
         void velocidad()
@@ -398,7 +432,7 @@ namespace VirtualDriver
 
             if (e.KeyCode == Keys.Up)
             {
-                if (gamespeed < 3)
+                if (gamespeed < 4)
                 {
                     gamespeed++;
                     up = true;
