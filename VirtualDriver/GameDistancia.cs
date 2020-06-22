@@ -57,11 +57,13 @@ namespace VirtualDriver
             {
                 cartelcop.Text = "PARE!";
                 cartelcop.ForeColor = Color.Red;
+                ///////////////
                 cartelcop.Top = semaforo.Top + 57;
                 cop.Top = cartelcop.Top + 19;
-
+                ///////////////
                 cop.Visible = true;
                 cartelcop.Visible = true;
+                ///////////////
                 if (cop.Top >= 460)
                 { 
                     cop.Visible = false;
@@ -81,15 +83,6 @@ namespace VirtualDriver
                 cartelcop.Text = "SIGA";
                 cartelcop.ForeColor = Color.Green;
             }
-
-
-            /////////
-            if (t3 == 6 && semaforo.Top >= 460)
-            { 
-                semaforo.Visible = false;
-                senda.Visible = false;
-            }
-
 
             putinf();
             moveline(gamespeed); //Lineas Blancas
@@ -141,13 +134,14 @@ namespace VirtualDriver
         private void timer2_Tick(object sender, EventArgs e)
         {
             desacelerarcar();
-            if (contTime2 < 3)
+            if (contTime2 < 5)
             {
                 contTime2++;
                 //label1.Text = contTime2.ToString();
-                if (contTime2 == 3)
+                if (contTime2 == 5)
                 {
                     timer3.Start();
+                    t3 = 0;
                 }
 
             }
@@ -162,7 +156,9 @@ namespace VirtualDriver
             {
                 contAparicionCop++;
                 if (contAparicionCop == 2 || contAparicionCop == 4)
+                {
                     aparececop = true;
+                }
                 semaforo.Visible = true;
                 senda.Visible = true;
                 b3 = true;
@@ -195,7 +191,6 @@ namespace VirtualDriver
             if (t3 == 6)
             {
                 contTime2 = 0;
-                t3 = 0;
                 timer3.Stop();
             }
         }
@@ -287,11 +282,24 @@ namespace VirtualDriver
         void sendSema(int speed)
         {
             if (semaforo.Top >= 460)
-            { semaforo.Top = 0; }
+            {
+                semaforo.Top = 0;
+                if (t3 == 6)
+                {
+                    semaforo.Visible = false;
+                    b3 = false;
+                }
+            }
             else { semaforo.Top += speed; }
 
             if (senda.Top >= 460)
-            { senda.Top = 0; }
+            {
+                senda.Top = 0;
+                if (t3 == 6)
+                {
+                    senda.Visible = false;
+                }
+            }
             else { senda.Top += speed; }
         }
 
