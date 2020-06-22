@@ -55,23 +55,25 @@ namespace VirtualDriver
         {
             if (aparececop)
             {
+                cartelcop.Text = "PARE!";
+                cartelcop.ForeColor = Color.Red;
                 cartelcop.Top = semaforo.Top + 57;
                 cop.Top = cartelcop.Top + 19;
 
                 cop.Visible = true;
-                if (cop.Top >= 500)
+                cartelcop.Visible = true;
+                if (cop.Top >= 460)
                 { 
                     cop.Visible = false;
                     aparececop = false;
+                    cartelcop.Visible = false;
+                    desactivarcartel = false;
                 }
-                else { cop.Top += gamespeed; }
-
-                cartelcop.Visible = true;
-                if (cartelcop.Top >= 500)
-                { cartelcop.Visible = false; }
-                else { cartelcop.Top += gamespeed; }
-                
-                //contAparicionCop++;
+                else 
+                {
+                    cop.Top += gamespeed;
+                    cartelcop.Top += gamespeed;
+                }
             }
 
             if (desactivarcartel)
@@ -79,6 +81,15 @@ namespace VirtualDriver
                 cartelcop.Text = "SIGA";
                 cartelcop.ForeColor = Color.Green;
             }
+
+
+            /////////
+            if (t3 == 6 && semaforo.Top >= 460)
+            { 
+                semaforo.Visible = false;
+                senda.Visible = false;
+            }
+
 
             putinf();
             moveline(gamespeed); //Lineas Blancas
@@ -150,15 +161,19 @@ namespace VirtualDriver
             if (t3 == 1)
             {
                 contAparicionCop++;
-                if (contAparicionCop == 2)
+                if (contAparicionCop == 2 || contAparicionCop == 4)
                     aparececop = true;
                 semaforo.Visible = true;
                 senda.Visible = true;
                 b3 = true;
                 
             }
+
             if (t3 == 2)
+            {
                 semaforo.Image = Image.FromFile("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\yellowsf.png");
+            }
+                
 
             if (t3 == 3)
             {
@@ -168,13 +183,12 @@ namespace VirtualDriver
 
             if (t3 == 4)
             {
-                if (contAparicionCop == 2)
+                if (contAparicionCop == 2 || contAparicionCop == 4)
                     desactivarcartel = true;
             }
 
             if (t3 == 5)
             {
-                
                 red = false;
                 semaforo.Image = Image.FromFile("C:\\Users\\Villanueva.MICHAEL-PC\\Downloads\\TP3 TED\\greensf.png");
             }
