@@ -149,6 +149,9 @@
     <Content Include="Properties\Images\Sin título.png" />
     <Content Include="Properties\Images\yellowsf.png" />
     <Content Include="Resources\Green.png" />
+    <None Include="Resources\velocidad-minima-30.png" />
+    <None Include="Resources\maximo-90.png" />
+    <None Include="Resources\maximo-60.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

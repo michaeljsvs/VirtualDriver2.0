@@ -64,7 +64,6 @@ C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\bin\Debug\Virt
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\bin\Debug\VirtualDriver.pdb
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\obj\Debug\VirtualDriver.csprojAssemblyReference.cache
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\obj\Debug\VirtualDriver.Creditos.resources
-C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\obj\Debug\VirtualDriver.GameDistancia.resources
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\obj\Debug\VirtualDriver.Inicio.resources
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\obj\Debug\VirtualDriver.Properties.Resources.resources
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\obj\Debug\VirtualDriver.TestManejo.resources

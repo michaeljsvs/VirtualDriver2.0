@@ -33,12 +33,19 @@
             this.lblchoque = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cartelcop = new System.Windows.Forms.Label();
+            this.Infracciones = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.rESETToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.iNICIOToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.car = new System.Windows.Forms.PictureBox();
             this.enemy3 = new System.Windows.Forms.PictureBox();
             this.enemy2 = new System.Windows.Forms.PictureBox();
             this.enemy1 = new System.Windows.Forms.PictureBox();
             this.cop = new System.Windows.Forms.PictureBox();
-            this.Infracciones = new System.Windows.Forms.Label();
             this.semaforo = new System.Windows.Forms.PictureBox();
             this.senda = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -52,13 +59,10 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.rESETToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.iNICIOToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.min30 = new System.Windows.Forms.PictureBox();
+            this.max90 = new System.Windows.Forms.PictureBox();
+            this.max60 = new System.Windows.Forms.PictureBox();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
@@ -77,7 +81,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.min30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.max90)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.max60)).BeginInit();
             this.SuspendLayout();
             // 
             // lblchoque
@@ -112,16 +118,91 @@
             this.cartelcop.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cartelcop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cartelcop.ForeColor = System.Drawing.Color.Red;
-            this.cartelcop.Location = new System.Drawing.Point(358, 116);
+            this.cartelcop.Location = new System.Drawing.Point(358, 106);
             this.cartelcop.Name = "cartelcop";
             this.cartelcop.Size = new System.Drawing.Size(53, 16);
             this.cartelcop.TabIndex = 49;
             this.cartelcop.Text = "PARE!";
             // 
+            // Infracciones
+            // 
+            this.Infracciones.AutoSize = true;
+            this.Infracciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Infracciones.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Infracciones.ForeColor = System.Drawing.Color.Red;
+            this.Infracciones.Location = new System.Drawing.Point(27, 0);
+            this.Infracciones.Name = "Infracciones";
+            this.Infracciones.Size = new System.Drawing.Size(150, 18);
+            this.Infracciones.TabIndex = 43;
+            this.Infracciones.Text = "Infracciones = 0";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick_1);
+            // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Interval = 3000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Blue;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(276, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 18);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Puntaje = 0";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuStrip1.BackgroundImage")));
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rESETToolStripMenuItem1,
+            this.iNICIOToolStripMenuItem2});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 462);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(409, 24);
+            this.menuStrip1.TabIndex = 52;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // rESETToolStripMenuItem1
+            // 
+            this.rESETToolStripMenuItem1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rESETToolStripMenuItem1.ForeColor = System.Drawing.Color.GreenYellow;
+            this.rESETToolStripMenuItem1.Name = "rESETToolStripMenuItem1";
+            this.rESETToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.rESETToolStripMenuItem1.Size = new System.Drawing.Size(60, 20);
+            this.rESETToolStripMenuItem1.Text = "RESET";
+            this.rESETToolStripMenuItem1.Click += new System.EventHandler(this.rESETToolStripMenuItem1_Click_1);
+            // 
+            // iNICIOToolStripMenuItem2
+            // 
+            this.iNICIOToolStripMenuItem2.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iNICIOToolStripMenuItem2.ForeColor = System.Drawing.Color.GreenYellow;
+            this.iNICIOToolStripMenuItem2.Name = "iNICIOToolStripMenuItem2";
+            this.iNICIOToolStripMenuItem2.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.iNICIOToolStripMenuItem2.Size = new System.Drawing.Size(65, 20);
+            this.iNICIOToolStripMenuItem2.Text = "INICIO";
+            this.iNICIOToolStripMenuItem2.Click += new System.EventHandler(this.iNICIOToolStripMenuItem2_Click);
+            // 
             // car
             // 
             this.car.Image = ((System.Drawing.Image)(resources.GetObject("car.Image")));
-            this.car.Location = new System.Drawing.Point(317, 358);
+            this.car.Location = new System.Drawing.Point(316, 358);
             this.car.Name = "car";
             this.car.Size = new System.Drawing.Size(29, 58);
             this.car.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,29 +242,17 @@
             // cop
             // 
             this.cop.Image = ((System.Drawing.Image)(resources.GetObject("cop.Image")));
-            this.cop.Location = new System.Drawing.Point(361, 135);
+            this.cop.Location = new System.Drawing.Point(361, 125);
             this.cop.Name = "cop";
             this.cop.Size = new System.Drawing.Size(50, 66);
             this.cop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cop.TabIndex = 44;
             this.cop.TabStop = false;
             // 
-            // Infracciones
-            // 
-            this.Infracciones.AutoSize = true;
-            this.Infracciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Infracciones.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Infracciones.ForeColor = System.Drawing.Color.Red;
-            this.Infracciones.Location = new System.Drawing.Point(-2, 0);
-            this.Infracciones.Name = "Infracciones";
-            this.Infracciones.Size = new System.Drawing.Size(150, 18);
-            this.Infracciones.TabIndex = 43;
-            this.Infracciones.Text = "Infracciones = 0";
-            // 
             // semaforo
             // 
             this.semaforo.Image = ((System.Drawing.Image)(resources.GetObject("semaforo.Image")));
-            this.semaforo.Location = new System.Drawing.Point(364, 59);
+            this.semaforo.Location = new System.Drawing.Point(364, 49);
             this.semaforo.Name = "semaforo";
             this.semaforo.Size = new System.Drawing.Size(47, 54);
             this.semaforo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -193,7 +262,7 @@
             // senda
             // 
             this.senda.Image = ((System.Drawing.Image)(resources.GetObject("senda.Image")));
-            this.senda.Location = new System.Drawing.Point(30, 69);
+            this.senda.Location = new System.Drawing.Point(30, 59);
             this.senda.Name = "senda";
             this.senda.Size = new System.Drawing.Size(353, 44);
             this.senda.TabIndex = 41;
@@ -302,68 +371,37 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
-            // timer1
+            // min30
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            this.min30.Image = global::VirtualDriver.Properties.Resources.velocidad_minima_30;
+            this.min30.Location = new System.Drawing.Point(205, 439);
+            this.min30.Name = "min30";
+            this.min30.Size = new System.Drawing.Size(53, 50);
+            this.min30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.min30.TabIndex = 54;
+            this.min30.TabStop = false;
             // 
-            // menuStrip1
+            // max90
             // 
-            this.menuStrip1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuStrip1.BackgroundImage")));
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rESETToolStripMenuItem1,
-            this.iNICIOToolStripMenuItem2});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 462);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(409, 24);
-            this.menuStrip1.TabIndex = 52;
-            this.menuStrip1.Text = "menuStrip1";
+            this.max90.Image = global::VirtualDriver.Properties.Resources.maximo_90;
+            this.max90.Location = new System.Drawing.Point(356, 441);
+            this.max90.Name = "max90";
+            this.max90.Size = new System.Drawing.Size(53, 45);
+            this.max90.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.max90.TabIndex = 55;
+            this.max90.TabStop = false;
+            this.max90.Visible = false;
             // 
-            // rESETToolStripMenuItem1
+            // max60
             // 
-            this.rESETToolStripMenuItem1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rESETToolStripMenuItem1.ForeColor = System.Drawing.Color.GreenYellow;
-            this.rESETToolStripMenuItem1.Name = "rESETToolStripMenuItem1";
-            this.rESETToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.rESETToolStripMenuItem1.Size = new System.Drawing.Size(60, 20);
-            this.rESETToolStripMenuItem1.Text = "RESET";
-            this.rESETToolStripMenuItem1.Click += new System.EventHandler(this.rESETToolStripMenuItem1_Click_1);
-            // 
-            // iNICIOToolStripMenuItem2
-            // 
-            this.iNICIOToolStripMenuItem2.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iNICIOToolStripMenuItem2.ForeColor = System.Drawing.Color.GreenYellow;
-            this.iNICIOToolStripMenuItem2.Name = "iNICIOToolStripMenuItem2";
-            this.iNICIOToolStripMenuItem2.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.iNICIOToolStripMenuItem2.Size = new System.Drawing.Size(65, 20);
-            this.iNICIOToolStripMenuItem2.Text = "INICIO";
-            this.iNICIOToolStripMenuItem2.Click += new System.EventHandler(this.iNICIOToolStripMenuItem2_Click);
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick_1);
-            // 
-            // timer3
-            // 
-            this.timer3.Enabled = true;
-            this.timer3.Interval = 3000;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Blue;
-            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(299, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 18);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "Puntaje = 0";
+            this.max60.Image = global::VirtualDriver.Properties.Resources.maximo_60;
+            this.max60.Location = new System.Drawing.Point(283, 439);
+            this.max60.Name = "max60";
+            this.max60.Size = new System.Drawing.Size(54, 47);
+            this.max60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.max60.TabIndex = 56;
+            this.max60.TabStop = false;
+            this.max60.Visible = false;
             // 
             // Game
             // 
@@ -371,6 +409,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(409, 486);
+            this.Controls.Add(this.max60);
+            this.Controls.Add(this.max90);
+            this.Controls.Add(this.min30);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lblchoque);
@@ -402,6 +443,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Game_KeyUp);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.car)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
@@ -420,8 +463,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.min30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.max90)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.max60)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,5 +502,8 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox min30;
+        private System.Windows.Forms.PictureBox max90;
+        private System.Windows.Forms.PictureBox max60;
     }
 }

@@ -36,6 +36,10 @@ namespace VirtualDriver
         bool siga = false;
         bool pare = false;
 
+        bool mn30 = false;
+        bool mx60 = false;
+        bool mx90 = false;
+
         //Inicializacion
         public Game()
         {
@@ -47,6 +51,8 @@ namespace VirtualDriver
             lblchoque.Visible = false;
 
             timer3.Stop();
+
+            min30.Visible = false;
         }
 
 
@@ -57,6 +63,10 @@ namespace VirtualDriver
         //TIMER 1
         private void timer1_Tick_1(object sender, EventArgs e)
         {
+            cartelmin30();
+            cartelmax60();
+            cartelmax90();
+
             aprccop();
             moveline(gamespeed); //Lineas Blancas
 
@@ -82,6 +92,10 @@ namespace VirtualDriver
         //TIMER 2
         private void timer2_Tick_1(object sender, EventArgs e)
         {
+            ipmin30();
+            ipmax60();
+            ipmax90();
+
             desacelerarcar();
             if (contTime2 < 5)
             {
@@ -106,7 +120,6 @@ namespace VirtualDriver
                 if (contAparicionCop == 2 || contAparicionCop == 4)
                 {
                     aparececop = true;
-
                 }
                 semaforo.Visible = true;
                 senda.Visible = true;
@@ -130,6 +143,8 @@ namespace VirtualDriver
             {
                 if (contAparicionCop == 2 || contAparicionCop == 4)
                     desactivarcartel = true;
+
+                
             }
 
             if (t3 == 5)
@@ -146,6 +161,96 @@ namespace VirtualDriver
 
         //METODOS ----------------------------------------------------------------------------
 
+        //CARTELES
+        void cartelmin30()
+        {
+            if (t3 == 5)
+            {
+                min30.Visible = true;
+                mn30 = true;
+            }
+            if (contTime2 == 2)
+            {
+                min30.Visible = false;
+                mn30 = false;
+            }
+        }
+        
+        void cartelmax60()
+        {
+            if (contTime2 == 2)
+            {
+                max60.Visible = true;
+                mx60 = true;
+            }
+            if (t3 == 5)
+            {
+                max60.Visible = false;
+                mx60 = false;
+            }
+        }
+
+        void cartelmax90()
+        {
+            if (t3 == 5)
+            {
+                max90.Visible = true;
+                mx90 = true;
+            }
+            if (contTime2 == 2)
+            {
+                max90.Visible = false;
+                mx90 = false;
+            }
+        }
+
+        //CARTELES - INFRACCIONES Y PUNTAJE
+        void ipmin30()
+        {
+            if (mn30)
+            {
+                if (gamespeed <= 6 && gamespeed >= 2)
+                {
+                    puntaj();
+                }
+                else
+                {
+                    infrac();
+                }
+            }
+        }
+
+        void ipmax60()
+        {
+            if (mx60)
+            {
+                if (gamespeed <= 4)
+                {
+                    puntaj();
+                }
+                else
+                {
+                    infrac();
+                }
+            }
+        }
+
+        void ipmax90()
+        {
+            if (mx90)
+            {
+                if (gamespeed <= 6 && gamespeed >= 2)
+                {
+                    puntaj();
+                }
+                else
+                {
+                    infrac();
+                }
+            }
+        }
+
+        //OPTIMIZACION
         void aprccop()
         {
             if (aparececop)
@@ -154,7 +259,7 @@ namespace VirtualDriver
                 cartelcop.ForeColor = Color.Red;
                 pare = true;
                 ///////////////
-                cartelcop.Top = semaforo.Top + 57;
+                cartelcop.Top = semaforo.Top + 57; //Esto tambien hace mover al Picture en cada ciclo del time
                 cop.Top = cartelcop.Top + 19;
                 ///////////////
                 cop.Visible = true;
@@ -175,11 +280,6 @@ namespace VirtualDriver
                     desactivarcartel = false;
                     siga = false;
                     pare = false;
-                }
-                else
-                {
-                    cop.Top += gamespeed;
-                    cartelcop.Top += gamespeed;
                 }
             }
         }
@@ -368,7 +468,9 @@ namespace VirtualDriver
         //VELOCIDAD
         void velocidad()
         {
-            label2.Text = "Velocidad = " + gamespeed.ToString();
+            label2.Left = car.Left - 37;
+            int vel = gamespeed * 15;
+            label2.Text = "Vel = " + vel.ToString() + " km/h";
         }
 
         //DESACELERAR

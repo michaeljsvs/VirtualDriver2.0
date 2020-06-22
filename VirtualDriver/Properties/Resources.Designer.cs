@@ -73,9 +73,39 @@ namespace VirtualDriver.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maximo_60 {
+            get {
+                object obj = ResourceManager.GetObject("maximo_60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maximo_90 {
+            get {
+                object obj = ResourceManager.GetObject("maximo_90", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap redsf {
             get {
                 object obj = ResourceManager.GetObject("redsf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap velocidad_minima_30 {
+            get {
+                object obj = ResourceManager.GetObject("velocidad_minima_30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
