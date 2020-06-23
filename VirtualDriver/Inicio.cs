@@ -75,5 +75,12 @@ namespace VirtualDriver
             ventana.Show();
             this.Hide();
         }
+
+        private void btnSeñalizacion_Click(object sender, EventArgs e)
+        {
+            Señales ventana = new Señales();
+            ventana.Show();
+            this.Hide();
+        }
     }
 }

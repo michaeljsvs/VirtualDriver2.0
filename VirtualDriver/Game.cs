@@ -448,18 +448,24 @@ namespace VirtualDriver
             if (car.Bounds.IntersectsWith(enemy1.Bounds))
             {
                 timer1.Enabled = false;
+                timer2.Enabled = false;
+                timer3.Enabled = false;
                 lblchoque.Visible = true;
             }
 
             if (car.Bounds.IntersectsWith(enemy2.Bounds))
             {
                 timer1.Enabled = false;
+                timer2.Enabled = false;
+                timer3.Enabled = false;
                 lblchoque.Visible = true;
             }
 
             if (car.Bounds.IntersectsWith(enemy3.Bounds))
             {
                 timer1.Enabled = false;
+                timer2.Enabled = false;
+                timer3.Enabled = false;
                 lblchoque.Visible = true;
             }
 

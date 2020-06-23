@@ -19,7 +19,7 @@ namespace VirtualDriver
            
         }
 
-        private int panelActual = 1;
+        private int panelActual = 0;
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -69,10 +69,18 @@ namespace VirtualDriver
         {
             List<Panel> pnl = new List<Panel>();
             pnl.Add(panel1);
+            pnl.Add(panel2);
+            pnl.Add(panel3);
+            pnl.Add(panel4);
+
+
             if (pnl.Count() > panelActual ) {
+                btnAnterior.Enabled = true;
+                pnl[panelActual].Visible = false;
                 panelActual++;
                 pnl[panelActual].Visible = true;
-                if (panelActual == pnl.Count()) {
+                
+                if (panelActual+1 == pnl.Count()) {
                     btnSiguiente.Enabled = false;
                 };
             };
@@ -80,18 +88,27 @@ namespace VirtualDriver
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
+            btnSiguiente.Enabled = true;
             List<Panel> pnl = new List<Panel>();
             pnl.Add(panel1);
-            if (panelActual > 1)
+            pnl.Add(panel2);
+            pnl.Add(panel3);
+            pnl.Add(panel4);
+
+            
+            if (panelActual > 0)
             {
+                pnl[panelActual].Visible = false;
                 panelActual--;
                 pnl[panelActual].Visible = true;
-                if (panelActual == 1)
+                if (panelActual == 0)
                 {
                     btnAnterior.Enabled = false;
                 };
             };
 
         }
+
+
     }
 }

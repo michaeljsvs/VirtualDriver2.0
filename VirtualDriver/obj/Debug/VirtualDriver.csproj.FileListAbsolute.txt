@@ -72,3 +72,4 @@ C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\obj\Debug\Virt
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\obj\Debug\VirtualDriver.pdb
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\obj\Debug\VirtualDriver.Game.resources
 E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Game.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Señales.resources
