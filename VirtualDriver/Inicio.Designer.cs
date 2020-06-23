@@ -217,6 +217,7 @@
             this.btnAyuda.TabIndex = 11;
             this.btnAyuda.Text = "  Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // panel9
             // 

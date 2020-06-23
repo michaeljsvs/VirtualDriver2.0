@@ -82,5 +82,12 @@ namespace VirtualDriver
             ventana.Show();
             this.Hide();
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Ayuda ventana = new Ayuda();
+            ventana.Show();
+            this.Hide();
+        }
     }
 }

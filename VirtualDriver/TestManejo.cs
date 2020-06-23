@@ -143,6 +143,7 @@ namespace VirtualDriver
                     lblRespuesta.Text = btn14Correcto.Text;
                     break;
             }
+
             lblRetro.Text += preguntaActual.ToString();
 
             if (preguntaActual != 15)

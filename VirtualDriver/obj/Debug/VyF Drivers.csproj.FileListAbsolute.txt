@@ -43,3 +43,4 @@ C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VyFDrivers\VirtualDriver\bin\Debug\V
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VyFDrivers\VirtualDriver\bin\Debug\VirtualDriver.pdb
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VyFDrivers\VirtualDriver\obj\Debug\VirtualDriver.Game.resources
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VyFDrivers\VirtualDriver\obj\Debug\VyF Drivers.csproj.CoreCompileInputs.cache
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Ayuda.resources
