@@ -12,6 +12,20 @@ namespace VirtualDriver
 {
     public partial class Game : Form
     {
+        //Variables de Informe
+        int contramano,
+            nrpoliciaTransito,
+            cruzar_rojo,
+            nomin30,
+            nomax60,
+            nomax90,
+            
+            cruzar_verde,
+            rpoliciaTransito,
+            simin30,
+            simax60,
+            simax90;
+
         //VARIABLES
         int gamespeed = 0;
         Random r = new Random();
@@ -23,7 +37,7 @@ namespace VirtualDriver
         bool up = false;
         int contTime2 = 0;
         int t3 = 0;
-        bool b3, c1, c2, c3 = false;
+        bool b3 = false;
         bool red = false;
         int puntaje = 0;
         int inf = 0;
@@ -212,10 +226,12 @@ namespace VirtualDriver
                 if (gamespeed <= 6 && gamespeed >= 2)
                 {
                     puntaj();
+                    simin30++;
                 }
                 else
                 {
                     infrac();
+                    nomin30++;
                 }
             }
         }
@@ -227,10 +243,12 @@ namespace VirtualDriver
                 if (gamespeed <= 4)
                 {
                     puntaj();
+                    simax60++;
                 }
                 else
                 {
                     infrac();
+                    nomax60 ++;
                 }
             }
         }
@@ -242,10 +260,12 @@ namespace VirtualDriver
                 if (gamespeed <= 6 && gamespeed >= 2)
                 {
                     puntaj();
+                    simax90++;
                 }
                 else
                 {
                     infrac();
+                    nomax90 ++;
                 }
             }
         }
@@ -310,10 +330,12 @@ namespace VirtualDriver
                         if (pare == false)
                         {
                             puntaj();
+                            cruzar_verde++;
                         }
                         else
                         {
                             infrac();
+                            nrpoliciaTransito++;
                         }
                     }
                 }
@@ -322,6 +344,7 @@ namespace VirtualDriver
                     if (hb == false)
                     {
                         infrac();
+                        contramano++;
                     }
 
                 }
@@ -341,10 +364,12 @@ namespace VirtualDriver
                     if (siga == false)
                     {
                         infrac();
+                        cruzar_rojo++;
                     }
                     else
                     {
                         puntaj();
+                        rpoliciaTransito++;
                     }
                 }
             }
@@ -447,28 +472,30 @@ namespace VirtualDriver
         {
             if (car.Bounds.IntersectsWith(enemy1.Bounds))
             {
-                timer1.Enabled = false;
-                timer2.Enabled = false;
-                timer3.Enabled = false;
-                lblchoque.Visible = true;
+                final();
             }
 
             if (car.Bounds.IntersectsWith(enemy2.Bounds))
             {
-                timer1.Enabled = false;
-                timer2.Enabled = false;
-                timer3.Enabled = false;
-                lblchoque.Visible = true;
+                final();
             }
 
             if (car.Bounds.IntersectsWith(enemy3.Bounds))
             {
-                timer1.Enabled = false;
-                timer2.Enabled = false;
-                timer3.Enabled = false;
-                lblchoque.Visible = true;
+                final();
             }
 
+        }
+
+        void final()
+        {
+            timer1.Enabled = false;
+            timer2.Enabled = false;
+            timer3.Enabled = false;
+            lblchoque.Visible = true;
+            Form infrac = new Estadísticas(inf.ToString(), contramano.ToString(), nrpoliciaTransito.ToString(), cruzar_rojo.ToString(), nomin30.ToString(), nomax60.ToString(), nomax90.ToString(),
+                puntaje.ToString(), rpoliciaTransito.ToString(), cruzar_verde.ToString(), simin30.ToString(), simax60.ToString(), simax90.ToString());
+            infrac.ShowDialog();
         }
 
         //VELOCIDAD

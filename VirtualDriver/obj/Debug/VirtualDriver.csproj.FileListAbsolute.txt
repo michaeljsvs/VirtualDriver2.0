@@ -32,7 +32,6 @@ C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\D
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.csproj.CoreCompileInputs.cache
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.exe
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.pdb
-C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.GameDistancia.resources
 E:\TED\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.exe.config
 E:\TED\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.exe
 E:\TED\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.pdb
@@ -73,3 +72,7 @@ C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\obj\Debug\Virt
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\GameNew\VirtualDriver\obj\Debug\VirtualDriver.Game.resources
 E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Game.resources
 E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Señales.resources
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Creditos.resources
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Game.resources
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Señales.resources
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Estadísticas.resources
