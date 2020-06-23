@@ -13,3 +13,18 @@ C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\D
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VyF Drivers.csproj.CoreCompileInputs.cache
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.exe
 C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.pdb
+E:\TED\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.exe.config
+E:\TED\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.exe
+E:\TED\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.pdb
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VyF Drivers.csprojAssemblyReference.cache
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Creditos.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Game.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Estadísticas.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Inicio.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Properties.Resources.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Señales.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.TestManejo.resources
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VyF Drivers.csproj.GenerateResource.cache
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VyF Drivers.csproj.CoreCompileInputs.cache
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.exe
+E:\TED\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.pdb

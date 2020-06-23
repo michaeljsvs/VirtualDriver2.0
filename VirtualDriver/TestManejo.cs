@@ -91,6 +91,14 @@ namespace VirtualDriver
 
         private void button2_Click(object sender, EventArgs e)
         {
+            lblRetro.Text += preguntaActual.ToString();
+            if(preguntaActual != 14) {
+                lblRetro.Text += ",";
+            }
+            else { 
+                lblRetro.Text += "."; };
+            lblRetro.Visible = true;
+            lblRetro1.Visible = true;
             panelActual.Visible = false;
             panelError.Visible = true;
         }
@@ -160,9 +168,6 @@ namespace VirtualDriver
            
         }
 
-        private void btnRetro_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
