@@ -38,6 +38,10 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.max60 = new System.Windows.Forms.PictureBox();
+            this.max90 = new System.Windows.Forms.PictureBox();
+            this.min30 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.rESETToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.iNICIOToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,9 +63,9 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.min30 = new System.Windows.Forms.PictureBox();
-            this.max90 = new System.Windows.Forms.PictureBox();
-            this.max60 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.max60)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.max90)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.min30)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.car)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).BeginInit();
@@ -81,9 +85,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.min30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.max90)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.max60)).BeginInit();
             this.SuspendLayout();
             // 
             // lblchoque
@@ -160,11 +161,49 @@
             this.label1.BackColor = System.Drawing.Color.Blue;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(276, 0);
+            this.label1.Location = new System.Drawing.Point(27, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 18);
             this.label1.TabIndex = 53;
             this.label1.Text = "Puntaje = 0";
+            // 
+            // timer4
+            // 
+            this.timer4.Enabled = true;
+            this.timer4.Interval = 4000;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+            // 
+            // max60
+            // 
+            this.max60.Image = global::VirtualDriver.Properties.Resources.maximo_60;
+            this.max60.Location = new System.Drawing.Point(299, 2);
+            this.max60.Name = "max60";
+            this.max60.Size = new System.Drawing.Size(54, 47);
+            this.max60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.max60.TabIndex = 56;
+            this.max60.TabStop = false;
+            this.max60.Visible = false;
+            // 
+            // max90
+            // 
+            this.max90.Image = global::VirtualDriver.Properties.Resources.maximo_90;
+            this.max90.Location = new System.Drawing.Point(356, 2);
+            this.max90.Name = "max90";
+            this.max90.Size = new System.Drawing.Size(53, 45);
+            this.max90.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.max90.TabIndex = 55;
+            this.max90.TabStop = false;
+            this.max90.Visible = false;
+            // 
+            // min30
+            // 
+            this.min30.Image = global::VirtualDriver.Properties.Resources.velocidad_minima_30;
+            this.min30.Location = new System.Drawing.Point(240, 0);
+            this.min30.Name = "min30";
+            this.min30.Size = new System.Drawing.Size(53, 50);
+            this.min30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.min30.TabIndex = 54;
+            this.min30.TabStop = false;
             // 
             // menuStrip1
             // 
@@ -371,38 +410,6 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
-            // min30
-            // 
-            this.min30.Image = global::VirtualDriver.Properties.Resources.velocidad_minima_30;
-            this.min30.Location = new System.Drawing.Point(205, 439);
-            this.min30.Name = "min30";
-            this.min30.Size = new System.Drawing.Size(53, 50);
-            this.min30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.min30.TabIndex = 54;
-            this.min30.TabStop = false;
-            // 
-            // max90
-            // 
-            this.max90.Image = global::VirtualDriver.Properties.Resources.maximo_90;
-            this.max90.Location = new System.Drawing.Point(356, 441);
-            this.max90.Name = "max90";
-            this.max90.Size = new System.Drawing.Size(53, 45);
-            this.max90.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.max90.TabIndex = 55;
-            this.max90.TabStop = false;
-            this.max90.Visible = false;
-            // 
-            // max60
-            // 
-            this.max60.Image = global::VirtualDriver.Properties.Resources.maximo_60;
-            this.max60.Location = new System.Drawing.Point(283, 439);
-            this.max60.Name = "max60";
-            this.max60.Size = new System.Drawing.Size(54, 47);
-            this.max60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.max60.TabIndex = 56;
-            this.max60.TabStop = false;
-            this.max60.Visible = false;
-            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,6 +450,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Game_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.max60)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.max90)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.min30)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.car)).EndInit();
@@ -463,9 +473,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.min30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.max90)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.max60)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,5 +512,6 @@
         private System.Windows.Forms.PictureBox min30;
         private System.Windows.Forms.PictureBox max90;
         private System.Windows.Forms.PictureBox max60;
+        private System.Windows.Forms.Timer timer4;
     }
 }

@@ -110,7 +110,6 @@ namespace VirtualDriver
             ipmax60();
             ipmax90();
 
-            desacelerarcar();
             if (contTime2 < 5)
             {
                 contTime2++;
@@ -150,7 +149,7 @@ namespace VirtualDriver
             if (t3 == 3)
             {
                 red = true;
-                semaforo.Image = Properties.Resources.redsf;
+                semaforo.Image = Properties.Resources.redsfc;
             }
 
             if (t3 == 4)
@@ -441,6 +440,11 @@ namespace VirtualDriver
                 enemy3.Location = new Point(228, 460);
             }
             else { enemy3.Top -= speed; }
+        }
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            desacelerarcar();
         }
 
         void sendSema(int speed)
