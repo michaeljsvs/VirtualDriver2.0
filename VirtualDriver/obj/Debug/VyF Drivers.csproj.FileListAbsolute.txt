@@ -1,0 +1,15 @@
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.exe.config
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.exe
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\bin\Debug\VirtualDriver.pdb
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VyF Drivers.csprojAssemblyReference.cache
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Creditos.resources
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Game.resources
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Estadísticas.resources
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Inicio.resources
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Properties.Resources.resources
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.Señales.resources
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.TestManejo.resources
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VyF Drivers.csproj.GenerateResource.cache
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VyF Drivers.csproj.CoreCompileInputs.cache
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.exe
+C:\Users\Villanueva.MICHAEL-PC\Source\Repos\VirtualDriver2.0\VirtualDriver\obj\Debug\VirtualDriver.pdb
