@@ -26,25 +26,27 @@ namespace VirtualDriver
         Panel panelActual = new Panel();
         int preguntaActual = 1;
         int respuestasCorrectas = 0;
+
+        //INICIO
         private void btnInicio_Click(object sender, EventArgs e)
         {
             Inicio inicio = new Inicio();
             inicio.Show();
             this.Hide();
         }
-
+        //MAXIMIZAR
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             btnMaximizar.Visible = false;
             btnRestaurar.Visible = true;
         }
-
+        //MINIMIZAR
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        //RESTAURAR
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
@@ -52,18 +54,19 @@ namespace VirtualDriver
             btnRestaurar.Visible = false;
 
         }
-
+        //CERRAR
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        //MOVER VENTANA
         private void barraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        //PREGUNTAS
         public string[,] Preguntas = new string[15,3] {
             {"¿Que es lo primero que debe hacer" + "\r\n" + "al subirse al vehiculo?","No usado" ,"0" },
             {"¿Que debe hacer al consmir bebidas alcoholicas?", "No Usado", "1" },
@@ -89,14 +92,68 @@ namespace VirtualDriver
             respuestasCorrectas ++;
         }
 
+        //PANEL BOTON INCORRECTO
         private void button2_Click(object sender, EventArgs e)
         {
+            switch (preguntaActual)
+            {
+                case 1:
+                    lblRespuesta.Text = btn0Correcto.Text;
+                    break;
+                case 2:
+                    lblRespuesta.Text = btn1Correcto.Text;
+                    break;
+                case 3:
+                    lblRespuesta.Text = btn2Correcto.Text;
+                    break;
+                case 4:
+                    lblRespuesta.Text = btn3Correcto.Text;
+                    break;
+                case 5:
+                    lblRespuesta.Text = btn4Correcto.Text;
+                    break;
+                case 6:
+                    lblRespuesta.Text = btn5Correcto.Text;
+                    break;
+                case 7:
+                    lblRespuesta.Text = btn6Correcto.Text;
+                    break;
+                case 8:
+                    lblRespuesta.Text = btn7Correcto.Text;
+                    break;
+                case 9:
+                    lblRespuesta.Text = btn8Correcto.Text;
+                    break;
+                case 10:
+                    lblRespuesta.Text = btn9Correcto.Text;
+                    break;
+                case 11:
+                    lblRespuesta.Text = btn10Correcto.Text;
+                    break;
+                case 12:
+                    lblRespuesta.Text = btn11Correcto.Text;
+                    break;
+                case 13:
+                    lblRespuesta.Text = btn12Correcto.Text;
+                    break;
+                case 14:
+                    lblRespuesta.Text = btn13Correcto.Text;
+                    break;
+                case 15:
+                    lblRespuesta.Text = btn14Correcto.Text;
+                    break;
+            }
             lblRetro.Text += preguntaActual.ToString();
-            if(preguntaActual != 14) {
+
+            if (preguntaActual != 15)
+            {
                 lblRetro.Text += ",";
             }
-            else { 
-                lblRetro.Text += "."; };
+            else
+            {
+                lblRetro.Text += ".";
+            };
+
             lblRetro.Visible = true;
             lblRetro1.Visible = true;
             panelActual.Visible = false;

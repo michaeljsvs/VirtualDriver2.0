@@ -87,6 +87,8 @@
             this.btn5Correcto = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panelFinal = new System.Windows.Forms.Panel();
+            this.lblRetro1 = new System.Windows.Forms.Label();
+            this.lblRetro = new System.Windows.Forms.Label();
             this.lblCondicion = new System.Windows.Forms.Label();
             this.lblTest = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -123,10 +125,10 @@
             this.lblError = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn0Correcto = new System.Windows.Forms.Button();
             this.lblPreguntas = new System.Windows.Forms.Label();
-            this.lblRetro1 = new System.Windows.Forms.Label();
-            this.lblRetro = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblRespuesta = new System.Windows.Forms.Label();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -272,7 +274,7 @@
             this.panelPreg0.Controls.Add(this.panelError);
             this.panelPreg0.Controls.Add(this.button3);
             this.panelPreg0.Controls.Add(this.button2);
-            this.panelPreg0.Controls.Add(this.button1);
+            this.panelPreg0.Controls.Add(this.btn0Correcto);
             this.panelPreg0.Controls.Add(this.lblPreguntas);
             this.panelPreg0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPreg0.Location = new System.Drawing.Point(0, 35);
@@ -910,6 +912,30 @@
             this.panelFinal.TabIndex = 13;
             this.panelFinal.Visible = false;
             // 
+            // lblRetro1
+            // 
+            this.lblRetro1.AutoSize = true;
+            this.lblRetro1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblRetro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRetro1.Location = new System.Drawing.Point(203, 244);
+            this.lblRetro1.Name = "lblRetro1";
+            this.lblRetro1.Size = new System.Drawing.Size(273, 20);
+            this.lblRetro1.TabIndex = 15;
+            this.lblRetro1.Text = "Deberias revisarlas y volver a intentar.";
+            this.lblRetro1.Visible = false;
+            // 
+            // lblRetro
+            // 
+            this.lblRetro.AutoSize = true;
+            this.lblRetro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblRetro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRetro.Location = new System.Drawing.Point(56, 210);
+            this.lblRetro.Name = "lblRetro";
+            this.lblRetro.Size = new System.Drawing.Size(242, 20);
+            this.lblRetro.TabIndex = 14;
+            this.lblRetro.Text = "Te equivocaste en las preguntas:";
+            this.lblRetro.Visible = false;
+            // 
             // lblCondicion
             // 
             this.lblCondicion.AutoSize = true;
@@ -1279,6 +1305,8 @@
             // 
             this.panelError.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelError.BackgroundImage")));
             this.panelError.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelError.Controls.Add(this.lblRespuesta);
+            this.panelError.Controls.Add(this.lblTitulo);
             this.panelError.Controls.Add(this.btnIncorrecto);
             this.panelError.Controls.Add(this.lblError);
             this.panelError.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1345,21 +1373,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btn0Correcto
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Khaki;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(47, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 52);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Colocarse el cinturón";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn0Correcto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn0Correcto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn0Correcto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.btn0Correcto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Khaki;
+            this.btn0Correcto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn0Correcto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn0Correcto.Location = new System.Drawing.Point(47, 233);
+            this.btn0Correcto.Name = "btn0Correcto";
+            this.btn0Correcto.Size = new System.Drawing.Size(126, 52);
+            this.btn0Correcto.TabIndex = 2;
+            this.btn0Correcto.Text = "Colocarse el cinturón";
+            this.btn0Correcto.UseVisualStyleBackColor = true;
+            this.btn0Correcto.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblPreguntas
             // 
@@ -1373,29 +1401,29 @@
             this.lblPreguntas.Text = "¿Qué es lo primero que debe hacer \r\nal subirse al vehículo?";
             this.lblPreguntas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblRetro1
+            // lblTitulo
             // 
-            this.lblRetro1.AutoSize = true;
-            this.lblRetro1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblRetro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRetro1.Location = new System.Drawing.Point(203, 244);
-            this.lblRetro1.Name = "lblRetro1";
-            this.lblRetro1.Size = new System.Drawing.Size(273, 20);
-            this.lblRetro1.TabIndex = 15;
-            this.lblRetro1.Text = "Deberias revisarlas y volver a intentar.";
-            this.lblRetro1.Visible = false;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblTitulo.Location = new System.Drawing.Point(12, 56);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(165, 18);
+            this.lblTitulo.TabIndex = 9;
+            this.lblTitulo.Text = "La Rpta Correcta es:";
             // 
-            // lblRetro
+            // lblRespuesta
             // 
-            this.lblRetro.AutoSize = true;
-            this.lblRetro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblRetro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRetro.Location = new System.Drawing.Point(56, 210);
-            this.lblRetro.Name = "lblRetro";
-            this.lblRetro.Size = new System.Drawing.Size(242, 20);
-            this.lblRetro.TabIndex = 14;
-            this.lblRetro.Text = "Te equivocaste en las preguntas:";
-            this.lblRetro.Visible = false;
+            this.lblRespuesta.AutoSize = true;
+            this.lblRespuesta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblRespuesta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRespuesta.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblRespuesta.Location = new System.Drawing.Point(12, 83);
+            this.lblRespuesta.Name = "lblRespuesta";
+            this.lblRespuesta.Size = new System.Drawing.Size(75, 15);
+            this.lblRespuesta.TabIndex = 9;
+            this.lblRespuesta.Text = "Respuesta";
             // 
             // TestManejo
             // 
@@ -1466,7 +1494,7 @@
         private System.Windows.Forms.Button btnIncio;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn0Correcto;
         private System.Windows.Forms.Panel panelError;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Panel panelCorrecto;
@@ -1555,5 +1583,7 @@
         private System.Windows.Forms.Label lblPreguntas;
         private System.Windows.Forms.Label lblRetro1;
         private System.Windows.Forms.Label lblRetro;
+        private System.Windows.Forms.Label lblRespuesta;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
